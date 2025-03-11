@@ -434,7 +434,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Team Section */}
+      
       {/* Team Section */}
 <section className="py-16 px-4 mx-8 md:mx-16 lg:mx-24 bg-gradient-to-b from-blue-50 to-white">
   <div className="container mx-auto">
