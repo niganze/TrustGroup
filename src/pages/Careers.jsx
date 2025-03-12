@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronDown , Mail, Phone } from 'lucide-react';
+import { ChevronDown, Mail, Phone, Send, Download, ExternalLink } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-
+import Profiler from '../assets/images/Byiringiro.jpeg';
 
 const Careers = () => {
   const [jobs, setJobs] = useState([]);
   const [selectedSubsidiary, setSelectedSubsidiary] = useState('all');
   const [loading, setLoading] = useState(true);
-
   const [activeIndex, setActiveIndex] = useState(null);
 
   const toggleFAQ = (index) => {
@@ -100,6 +99,26 @@ const Careers = () => {
     }, 1000);
   }, []);
 
+
+  const socialIcons = [
+    {
+      name: 'facebook',
+      path: 'M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z'
+    },
+    {
+      name: 'twitter',
+      path: 'M23.954 4.569a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.691 8.094 4.066 6.13 1.64 3.161a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.061a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.937 4.937 0 004.604 3.417 9.868 9.868 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63a9.936 9.936 0 002.46-2.548l-.047-.02z'
+    },
+    {
+      name: 'instagram',
+      path: 'M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913a5.885 5.885 0 001.384 2.126A5.868 5.868 0 004.14 23.37c.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558a5.898 5.898 0 002.126-1.384 5.86 5.86 0 001.384-2.126c.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913a5.89 5.89 0 00-1.384-2.126A5.847 5.847 0 0019.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227a3.81 3.81 0 01-.899 1.382 3.744 3.744 0 01-1.38.896c-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421a3.716 3.716 0 01-1.379-.899 3.644 3.644 0 01-.9-1.38c-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678a6.162 6.162 0 100 12.324 6.162 6.162 0 100-12.324zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405a1.441 1.441 0 01-2.88 0 1.44 1.44 0 012.88 0z'
+    },
+    {
+      name: 'linkedin',
+      path: 'M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z'
+    }
+  ];
+
   const subsidiaries = [
     { value: 'all', label: 'All Subsidiaries' },
     { value: 'Trusty Group', label: 'Trusty Group' },
@@ -111,797 +130,732 @@ const Careers = () => {
     { value: 'Trusty Trade & Commerce', label: 'Trusty Trade & Commerce' }
   ];
 
-  const faqCategories = [
-    {
-      title: "General Questions",
-      items: [
-        {
-          question: "What does Trusty Group do?",
-          answer: "Trusty Group is a diversified investment company with subsidiaries in real estate, construction, media production, technology, fashion, and trade. We focus on creating sustainable growth opportunities that benefit both investors and communities."
-        },
-        {
-          question: "How can I invest with Trusty Group?",
-          answer: "We offer various investment opportunities through our subsidiaries, particularly in real estate. You can contact our investment team through the Contact page for more information about current and upcoming investment options."
-        },
-        {
-          question: "Where does Trusty Group currently operate?",
-          answer: "Currently, our primary operations are based in Rwanda, with plans for expansion throughout East Africa and beyond in the coming years. Our 10-year goal includes significant international presence."
-        },
-        {
-          question: "How does Trusty Group contribute to community development?",
-          answer: "Our business model is centered around community impact. We create job opportunities, develop sustainable infrastructure, and plan to establish the Trusty Foundation, which will focus specifically on education, healthcare, and economic empowerment initiatives."
-        }
-      ]
-    },
-    {
-      title: "Career Questions",
-      items: [
-        {
-          question: "What is it like to work at Trusty Group?",
-          answer: "At Trusty Group, we foster a collaborative environment where employees are viewed as trustees with a stake in our collective success. Our culture emphasizes integrity, innovation, and community impact across all our subsidiaries. We encourage growth, creativity, and entrepreneurial thinking."
-        },
-        {
-          question: "Do you offer opportunities for career advancement?",
-          answer: "Yes, we're committed to the growth and development of our team members. With multiple subsidiaries under the Trusty Group umbrella, there are opportunities for both vertical advancement and horizontal movement across different companies and industries within our organization."
-        },
-        {
-          question: "What benefits do you offer?",
-          answer: "Our benefits package includes competitive salaries, healthcare coverage, professional development opportunities, and a supportive work environment. We also offer flexible work arrangements and the chance to contribute to meaningful projects that make a real difference in communities."
-        },
-        {
-          question: "How long does the hiring process typically take?",
-          answer: "Our hiring process typically takes 2-4 weeks from initial application to offer, depending on the position and number of applicants. We strive to keep candidates informed at each stage and provide timely feedback."
-        },
-        {
-          question: "Do you offer remote work opportunities?",
-          answer: "This depends on the position and subsidiary. Some roles allow for remote or hybrid work arrangements, while others require an on-site presence due to the nature of the work. Each job posting will specify the work location requirements."
-        }
-      ]
-    }
-  ];
-
   const filteredJobs = selectedSubsidiary === 'all' 
     ? jobs 
     : jobs.filter(job => job.subsidiary === selectedSubsidiary);
 
-  return (
-    <div className="bg-gray-100">
-      {/* Hero Section */}
-      <div className="relative overflow-hidden">
-      {/* Wave Background */}
-      <div className="absolute inset-0 z-0">
-        <svg
-          className="absolute bottom-0 left-0 w-full"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 1440 320"
-        >
-          <motion.path
-            initial={{ opacity: 0.3, y: 20 }}
-            animate={{ opacity: 0.6, y: 0 }}
-            transition={{
-              duration: 2,
-              repeat: Infinity,
-              repeatType: "reverse",
-              ease: "easeInOut"
-            }}
-            fill="#0099ff"
-            fillOpacity="0.4"
-            d="M0,288L48,272C96,256,192,224,288,213.3C384,203,480,213,576,218.7C672,224,768,224,864,197.3C960,171,1056,117,1152,112C1248,107,1344,149,1392,170.7L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-          ></motion.path>
-          <motion.path
-            initial={{ opacity: 0.3, y: 30 }}
-            animate={{ opacity: 0.8, y: 0 }}
-            transition={{
-              duration: 2.5,
-              repeat: Infinity,
-              repeatType: "reverse",
-              ease: "easeInOut",
-              delay: 0.2
-            }}
-            fill="#0099ff"
-            fillOpacity="0.6"
-            d="M0,96L48,128C96,160,192,224,288,224C384,224,480,160,576,138.7C672,117,768,139,864,165.3C960,192,1056,224,1152,224C1248,224,1344,192,1392,176L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-          ></motion.path>
-          <motion.path
-            initial={{ opacity: 0.4, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 3,
-              repeat: Infinity,
-              repeatType: "reverse",
-              ease: "easeInOut",
-              delay: 0.4
-            }}
-            fill="#0099ff"
-            fillOpacity="0.8"
-            d="M0,0L48,37.3C96,75,192,149,288,165.3C384,181,480,139,576,117.3C672,96,768,96,864,128C960,160,1056,224,1152,229.3C1248,235,1344,181,1392,154.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-          ></motion.path>
-        </svg>
-      </div>
+  const handleApplyEmail = (jobTitle) => {
+    const subject = encodeURIComponent(`Application for ${jobTitle} Position`);
+    const body = encodeURIComponent(`Dear Hiring Manager,\n\nI am writing to apply for the ${jobTitle} position at Trusty Group. Please find my CV attached.\n\nThank you for your consideration.\n\nSincerely,\n[Your Name]`);
+    window.location.href = `mailto:niganzealain@gmail.com?subject=${subject}&body=${body}`;
+  };
 
-      {/* Floating particles for added visual interest */}
-      <div className="absolute inset-0 z-0">
-        {[...Array(15)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute rounded-full bg-white"
-            style={{
-              width: Math.random() * 8 + 4 + "px",
-              height: Math.random() * 8 + 4 + "px",
-              left: Math.random() * 100 + "%",
-              top: Math.random() * 100 + "%",
-              opacity: Math.random() * 0.5 + 0.1
-            }}
-            animate={{
-              y: [0, Math.random() * -30 - 10],
-              x: [0, Math.random() * 20 - 10]
-            }}
-            transition={{
-              duration: Math.random() * 3 + 2,
-              repeat: Infinity,
-              repeatType: "reverse",
-              ease: "easeInOut"
-            }}
-          />
-        ))}
-      </div>
-      
-      {/* Main content with background */}
-      <div className="relative z-10 bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-20">
-        <div className="container mx-auto px-4">
+  return (
+    <div className="bg-gray-50">
+      {/* Hero Section - Improved with more modern gradient and better visual hierarchy */}
+      <div className="relative overflow-hidden bg-gradient-to-br from-blue-600 to-indigo-800 text-white py-16">
+        {/* Wave Background - Enhanced animation properties */}
+        <div className="absolute inset-0 z-0 opacity-30">
+          <svg
+            className="absolute bottom-0 left-0 w-full"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1440 320"
+          >
+            <motion.path
+              initial={{ opacity: 0.3, y: 10 }}
+              animate={{ opacity: 0.6, y: 0 }}
+              transition={{
+                duration: 2.5,
+                repeat: Infinity,
+                repeatType: "reverse",
+                ease: "easeInOut"
+              }}
+              fill="#ffffff"
+              fillOpacity="0.4"
+              d="M0,144L48,136C96,128,192,112,288,106.7C384,101,480,107,576,109.3C672,112,768,112,864,98.7C960,85,1056,59,1152,56C1248,53,1344,75,1392,85.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+            ></motion.path>
+            <motion.path
+              initial={{ opacity: 0.3, y: 15 }}
+              animate={{ opacity: 0.8, y: 0 }}
+              transition={{
+                duration: 3,
+                repeat: Infinity,
+                repeatType: "reverse",
+                ease: "easeInOut",
+                delay: 0.2
+              }}
+              fill="#ffffff"
+              fillOpacity="0.3"
+              d="M0,48L48,64C96,80,192,112,288,112C384,112,480,80,576,69.3C672,59,768,69,864,82.7C960,96,1056,112,1152,112C1248,112,1344,96,1392,88L1440,80L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+            ></motion.path>
+          </svg>
+        </div>
+
+        {/* Floating particles - Better particle system */}
+        <div className="absolute inset-0 z-0">
+          {[...Array(12)].map((_, i) => (
+            <motion.div
+              key={i}
+              className="absolute rounded-full bg-white"
+              style={{
+                width: Math.random() * 6 + 3 + "px",
+                height: Math.random() * 6 + 3 + "px",
+                left: Math.random() * 100 + "%",
+                top: Math.random() * 100 + "%",
+                opacity: Math.random() * 0.5 + 0.1
+              }}
+              animate={{
+                y: [0, Math.random() * -20 - 5],
+                x: [0, Math.random() * 15 - 7]
+              }}
+              transition={{
+                duration: Math.random() * 3 + 2,
+                repeat: Infinity,
+                repeatType: "reverse",
+                ease: "easeInOut"
+              }}
+            />
+          ))}
+        </div>
+        
+        {/* Main content with improved typography and spacing */}
+        <div className="relative z-10 container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="max-w-3xl"
+            className="flex flex-col items-center text-center max-w-4xl mx-auto"
           >
             <motion.h1 
-              className="text-4xl md:text-5xl font-bold mb-4"
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
+              className="text md:text-3xl font-serif mb-3 leading-tight"
+              initial={{ opacity: 0, y: -30 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              Join Our Team
+              Join Our Vision of Creating Thriving Communities
             </motion.h1>
             
             <motion.p 
-              className="text-xl mb-8"
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
+              className="text mb-3 max-w-2xl leading-relaxed"
+              initial={{ opacity: 0, y: -30 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              Be part of a company that's building thriving communities and cultivating peace worldwide.
+              Become part of a company that's building peace and prosperity worldwide through innovative investments and community-centric approaches.
             </motion.p>
             
             <motion.div 
-              className="flex flex-col md:flex-row gap-4"
+              className="flex flex-col sm:flex-row gap-4 justify-center"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
               <motion.a 
                 href="#openings" 
-                className="bg-white text-blue-600 px-6 py-3 rounded-md font-semibold hover:bg-gray-100 transition shadow-lg"
+                className="bg-white text-indigo-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition shadow-lg flex items-center justify-center"
                 whileHover={{ 
                   scale: 1.05, 
                   boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)" 
                 }}
                 whileTap={{ scale: 0.98 }}
               >
-                View Open Positions
+                <Send className="h-5 w-5 mr-2" />
+                Explore Open Positions
               </motion.a>
               
               <motion.a 
                 href="#mission" 
-                className="border-2 border-white text-white px-6 py-3 rounded-md font-semibold hover:bg-white hover:text-blue-600 transition"
+                className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-700 transition flex items-center justify-center"
                 whileHover={{ 
                   scale: 1.05, 
                   backgroundColor: "rgba(255, 255, 255, 1)",
-                  color: "#2563eb"
+                  color: "#4338ca"
                 }}
                 whileTap={{ scale: 0.98 }}
               >
-                Learn About Our Mission
+                Discover Our Mission
               </motion.a>
             </motion.div>
           </motion.div>
         </div>
       </div>
-      
-      {/* Decorative elements */}
-      <motion.div 
-        className="absolute top-10 right-10 w-24 h-24 rounded-full bg-white opacity-10"
-        initial={{ scale: 0 }}
-        animate={{ scale: [0, 1.2, 1] }}
-        transition={{ duration: 1.2, delay: 0.8 }}
-      />
-      
-      <motion.div 
-        className="absolute bottom-20 left-20 w-16 h-16 rounded-full bg-white opacity-10"
-        initial={{ scale: 0 }}
-        animate={{ scale: [0, 1.2, 1] }}
-        transition={{ duration: 1.2, delay: 1 }}
-      />
-    </div>
 
-      {/* Our Mission and Values Section */}
-      <div id="mission" className="py-16 bg-gray-50 mx-8 md:mx-16 lg:mx-24">
-        <div className="container mx-auto px-4">
-          <h2 className="text-2xl font-bold mb-4 text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-200">Our Mission & Values</h2>
-          <div className="grid md:grid-cols-2 gap-12">
-            <div>
-              <h3 className="text-2xl font-semibold mb-4 text-blue-600">Our Mission</h3>
-              <p className="text-gray-700 mb-6">
+      {/* Our Mission and Values Section - Improved layout and visual hierarchy */}
+      <div id="mission" className="py-20 bg-white">
+        <div className="container mx-auto px-6">
+          <h2 className="text-3xl font-bold mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-blue-500">Our Mission & Values</h2>
+          <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-xl shadow-sm"
+            >
+              <h3 className="text-2xl font-semibold mb-4 text-indigo-600">Our Mission</h3>
+              <p className="text-gray-700 mb-8 text-lg leading-relaxed">
                 To leverage our investment portfolio as a catalyst for cultivating peace and prosperity among communities worldwide. 
                 Optimize the use of talent, time, and treasure and establish a niche in the finance industry, and contribute to its scaling.
               </p>
-              <h3 className="text-2xl font-semibold mb-4 text-blue-600">Our Vision</h3>
-              <p className="text-gray-700">
+              <h3 className="text-2xl font-semibold mb-4 text-indigo-600">Our Vision</h3>
+              <p className="text-gray-700 text-lg leading-relaxed">
                 To be the world's leading catalyst for transformative growth through investment, creating a future where vibrant communities thrive in harmony.
               </p>
-            </div>
-            <div>
-              <h3 className="text-2xl font-semibold mb-4 text-blue-600">Core Values</h3>
-              <ul className="space-y-4">
-                <li className="flex items-start">
-                  <span className="bg-blue-600 text-white p-1 rounded-full mr-2 mt-1">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </span>
-                  <div>
-                    <span className="font-semibold">Timely Delivery:</span> We pledge ourselves to providing our clients and communities with the best possible value without sacrificing quality.
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <span className="bg-blue-600 text-white p-1 rounded-full mr-2 mt-1">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </span>
-                  <div>
-                    <span className="font-semibold">Innovative Mindset:</span> We believe in the power of creativity and forward-thinking, pushing limits and discovering new opportunities.
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <span className="bg-blue-600 text-white p-1 rounded-full mr-2 mt-1">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </span>
-                  <div>
-                    <span className="font-semibold">Community-Centric Approach:</span> Our investments and projects are designed with the community at heart.
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <span className="bg-blue-600 text-white p-1 rounded-full mr-2 mt-1">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </span>
-                  <div>
-                    <span className="font-semibold">Sustainability Focus:</span> We are devoted to sustainable practices that ensure long-term growth and environmental stewardship.
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <span className="bg-blue-600 text-white p-1 rounded-full mr-2 mt-1">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </span>
-                  <div>
-                    <span className="font-semibold">Integrity and Trustworthiness:</span> We uphold the highest standards of honesty, transparency, and accountability.
-                  </div>
-                </li>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="text-2xl font-semibold mb-6 text-indigo-600">Core Values</h3>
+              <ul className="space-y-6">
+                {[
+                  { title: "Timely Delivery", text: "We pledge ourselves to providing our clients and communities with the best possible value without sacrificing quality." },
+                  { title: "Innovative Mindset", text: "We believe in the power of creativity and forward-thinking, pushing limits and discovering new opportunities." },
+                  { title: "Community-Centric Approach", text: "Our investments and projects are designed with the community at heart." },
+                  { title: "Sustainability Focus", text: "We are devoted to sustainable practices that ensure long-term growth and environmental stewardship." },
+                  { title: "Integrity and Trustworthiness", text: "We uphold the highest standards of honesty, transparency, and accountability." }
+                ].map((value, index) => (
+                  <motion.li 
+                    key={index} 
+                    className="flex items-start bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-all"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    whileHover={{ y: -5 }}
+                  >
+                    <span className="bg-indigo-600 text-white p-1 rounded-full mr-3 mt-1">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </span>
+                    <div>
+                      <span className="font-semibold text-indigo-800">{value.title}:</span>{" "}
+                      <span className="text-gray-700">{value.text}</span>
+                    </div>
+                  </motion.li>
+                ))}
               </ul>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
 
-      {/* Why Join Us Section */}
-      <div className="py-16 bg-white mx-8 md:mx-16 lg:mx-24">
-        <div className="container mx-auto px-4">
-          <h2 className="text-2xl font-bold mb-4 text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-200">Why Join Trusty Group?</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Diverse Career Paths</h3>
-              <p className="text-gray-700">
-                With multiple subsidiaries spanning construction, real estate, technology, and more, we offer diverse career opportunities that allow employees to explore different industries without changing companies.
-              </p>
-            </div>
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Meaningful Impact</h3>
-              <p className="text-gray-700">
-                At Trusty Group, you'll contribute to projects that create lasting positive impacts on communities. Our vision is to cultivate peace and prosperity worldwide through our work.
-              </p>
-            </div>
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Growth & Development</h3>
-              <p className="text-gray-700">
-                We view our employees as trustees with a stake in our collective success. We invest in your personal and professional growth, providing opportunities to develop new skills and advance your career.
-              </p>
-            </div>
+      {/* Why Join Us Section - Enhanced with more interactive elements */}
+      <div className="py-20 bg-gray-50">
+        <div className="container mx-auto px-6">
+          <h2 className="text-3xl font-bold mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-blue-500">Why Join Trusty Group?</h2>
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {[
+              {
+                icon: (
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                ),
+                title: "Diverse Career Paths",
+                description: "With multiple subsidiaries spanning construction, real estate, technology, and more, we offer diverse career opportunities that allow employees to explore different industries without changing companies."
+              },
+              {
+                icon: (
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                ),
+                title: "Meaningful Impact",
+                description: "At Trusty Group, you'll contribute to projects that create lasting positive impacts on communities. Our vision is to cultivate peace and prosperity worldwide through our work."
+              },
+              {
+                icon: (
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                ),
+                title: "Growth & Development",
+                description: "We view our employees as trustees with a stake in our collective success. We invest in your personal and professional growth, providing opportunities to develop new skills and advance your career."
+              }
+            ].map((benefit, index) => (
+              <motion.div 
+                key={index}
+                className="bg-white p-8 rounded-xl shadow-sm hover:shadow-lg transition-all"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -10 }}
+              >
+                <div className="w-14 h-14 bg-indigo-600 text-white rounded-xl flex items-center justify-center mb-6">
+                  {benefit.icon}
+                </div>
+                <h3 className="text-xl font-semibold mb-4 text-indigo-600">{benefit.title}</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  {benefit.description}
+                </p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </div>
 
-      {/* Open Positions Section */}
-      <div id="openings" className="py-16 bg-gray-50 mx-8 md:mx-16 lg:mx-24">
-        <div className="container mx-auto px-4">
-          <h2 className="text-2xl font-bold mb-4 text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-200">Open Positions</h2>
+      {/* Open Positions Section - Enhanced with better job card design */}
+      <div id="openings" className="py-20 bg-white">
+        <div className="container mx-auto px-6">
+          <h2 className="text-3xl font-bold mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-blue-500">Open Positions</h2>
           
-          {/* Filter */}
-          <div className="mb-8">
+          {/* Filter - Enhanced with better design */}
+          <div className="mb-12 max-w-md mx-auto">
             <label htmlFor="subsidiary-filter" className="block text-sm font-medium text-gray-700 mb-2">
               Filter by Subsidiary
             </label>
-            <select
-              id="subsidiary-filter"
-              className="w-full md:w-72 p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
-              value={selectedSubsidiary}
-              onChange={(e) => setSelectedSubsidiary(e.target.value)}
-            >
-              {subsidiaries.map((sub) => (
-                <option key={sub.value} value={sub.value}>
-                  {sub.label}
-                </option>
-              ))}
-            </select>
+            <div className="relative">
+              <select
+                id="subsidiary-filter"
+                className="w-full p-3 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 appearance-none bg-white shadow-sm hover:border-indigo-300 transition-all"
+                value={selectedSubsidiary}
+                onChange={(e) => setSelectedSubsidiary(e.target.value)}
+              >
+                {subsidiaries.map((sub) => (
+                  <option key={sub.value} value={sub.value}>
+                    {sub.label}
+                  </option>
+                ))}
+              </select>
+              <div className="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none">
+                <ChevronDown className="h-5 w-5 text-gray-400" />
+              </div>
+            </div>
           </div>
           
-          {/* Job Listings */}
+          {/* Job Listings - Improved card design and interactions */}
           {loading ? (
-            <div className="text-center py-12">
-              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto"></div>
-              <p className="mt-4 text-gray-600">Loading job listings...</p>
+            <div className="text-center py-16">
+              <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-indigo-600 mx-auto"></div>
+              <p className="mt-6 text-gray-600 text-lg">Loading job opportunities...</p>
             </div>
           ) : filteredJobs.length > 0 ? (
-            <div className="space-y-6">
-              {filteredJobs.map((job) => (
-                <div key={job.id} className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
-                  <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+            <div className="space-y-8 max-w-4xl mx-auto">
+              {filteredJobs.map((job, index) => (
+                <motion.div 
+                  key={job.id} 
+                  className="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-all"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4 mb-6">
                     <div>
-                      <h3 className="text-xl font-bold text-blue-600">{job.title}</h3>
-                      <p className="text-gray-600">{job.subsidiary}</p>
+                      <h3 className="text-2xl font-bold text-indigo-600 mb-1">{job.title}</h3>
+                      <p className="text-gray-600 flex items-center">
+                        <span className="inline-block w-4 h-4 bg-indigo-100 rounded-full mr-2"></span>
+                        {job.subsidiary}
+                      </p>
                     </div>
-                    <div className="mt-2 md:mt-0 md:text-right">
-                      <span className="inline-block bg-blue-100 text-blue-800 text-sm px-3 py-1 rounded-full">
+                    <div className="md:text-right">
+                      <span className="inline-block bg-indigo-100 text-indigo-800 text-sm px-4 py-1 rounded-full font-medium">
                         {job.type}
                       </span>
-                      <p className="text-gray-600 text-sm mt-1">{job.location}</p>
+                      <p className="text-gray-600 text-sm mt-2 flex items-center md:justify-end">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                        {job.location}
+                      </p>
                     </div>
                   </div>
-                  <p className="text-gray-700 mb-4">{job.description}</p>
-                  <div className="mb-4">
-                    <h4 className="font-semibold mb-2">Qualifications:</h4>
-                    <ul className="list-disc pl-5">
+                  <p className="text-gray-700 mb-6 leading-relaxed">{job.description}</p>
+                  <div className="mb-8">
+                    <h4 className="font-semibold mb-3 text-gray-800">Key Qualifications:</h4>
+                    <ul className="space-y-2">
                       {job.qualifications.map((qualification, index) => (
-                        <li key={index} className="text-gray-700">{qualification}</li>
+                        <li key={index} className="text-gray-700 flex items-start">
+                          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-indigo-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                          </svg>
+                          {qualification}
+                        </li>
                       ))}
                     </ul>
                   </div>
-                  <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center">
-                    <p className="text-sm text-gray-500 mb-2 sm:mb-0">Posted on: {new Date(job.postedDate).toLocaleDateString()}</p>
-                    <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md transition">
-                      Apply Now
-                    </button>
+                  <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center border-t pt-6 border-gray-100">
+                    <p className="text-sm text-gray-500 mb-4 sm:mb-0 flex items-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                      </svg>
+                      Posted: {new Date(job.postedDate).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
+                    </p>
+                    <motion.button 
+                      className="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg transition flex items-center"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.98 }}
+                      onClick={() => handleApplyEmail(job.title)}
+                    >
+                      <Mail className="h-5 w-5 mr-2" />
+                      Apply via Email
+                    </motion.button>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
           ) : (
-            <div className="text-center py-12 bg-white rounded-lg shadow-sm border border-gray-200">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 mx-auto text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <div className="text-center py-16 bg-white rounded-xl shadow-sm border border-gray-100 max-w-2xl mx-auto">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 mx-auto text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
               </svg>
-              <p className="mt-4 text-lg font-medium text-gray-600">No open positions found for this subsidiary</p>
-              <p className="mt-2 text-gray-500">Please check back later or try a different filter.</p>
+              <h3 className="mt-6 text-xl font-medium text-gray-700">No open positions found</h3>
+              <p className="mt-2 text-gray-500 max-w-md mx-auto">We don't currently have open positions for this subsidiary. Please check back later or try a different filter.</p>
             </div>
           )}
         </div>
       </div>
 
-      {/* Application Process */}
-      <div className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-2xl font-bold mb-4 text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-200">Our Application Process</h2>
-          <div className="max-w-3xl mx-auto">
+      {/* Application Process - Modernized with better visuals */}
+      <div className="py-20 bg-gray-50">
+        <div className="container mx-auto px-6">
+          <h2 className="text-3xl font-bold mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-blue-500">Our Application Process</h2>
+          <div className="max-w-4xl mx-auto">
             <div className="relative">
               {/* Timeline line */}
-              <div className="absolute left-4 top-0 h-full w-0.5 bg-blue-600 hidden md:block"></div>
+              <div className="absolute left-0 md:left-8 top-0 h-full w-1 bg-indigo-200 hidden md:block rounded-full"></div>
               
-              {/* Steps */}
-              <div className="space-y-8">
-                {/* Step 1 */}
-                <div className="relative flex items-start group">
-                  <div className="flex flex-col items-center mr-4">
-                    <div className="rounded-full bg-blue-600 text-white w-8 h-8 flex items-center justify-center z-10">
-                      1
-                    </div>
-                    <div className="h-full w-0.5 bg-blue-600 hidden md:block"></div>
-                  </div>
-                  <div className="bg-gray-50 p-4 rounded-lg w-full">
-                    <h3 className="text-xl font-semibold mb-2">Application Submission</h3>
-                    <p className="text-gray-700">
-                      Click "Apply Now" on the job listing that interests you. You'll be asked to submit your resume/CV and answer a few questions about your qualifications and interest in our mission.
-                    </p>
-                  </div>
-                </div>
-                
-                {/* Step 2 */}
-                <div className="relative flex items-start group">
-                  <div className="flex flex-col items-center mr-4">
-                    <div className="rounded-full bg-blue-600 text-white w-8 h-8 flex items-center justify-center z-10">
-                      2
-                    </div>
-                    <div className="h-full w-0.5 bg-blue-600 hidden md:block"></div>
-                  </div>
-                  <div className="bg-gray-50 p-4 rounded-lg w-full">
-                    <h3 className="text-xl font-semibold mb-2">Initial Screening</h3>
-                    <p className="text-gray-700">
-                      Our hiring team will review your application. If your qualifications match our needs, we'll contact you for a brief phone or video interview to learn more about your background and experience.
-                    </p>
-                  </div>
-                </div>
-                
-                {/* Step 3 */}
-                <div className="relative flex items-start group">
-                  <div className="flex flex-col items-center mr-4">
-                    <div className="rounded-full bg-blue-600 text-white w-8 h-8 flex items-center justify-center z-10">
-                      3
-                    </div>
-                    <div className="h-full w-0.5 bg-blue-600 hidden md:block"></div>
-                  </div>
-                  <div className="bg-gray-50 p-4 rounded-lg w-full">
-                    <h3 className="text-xl font-semibold mb-2">In-Depth Interview</h3>
-                    <p className="text-gray-700">
-                      Qualified candidates will be invited for a comprehensive interview with the hiring manager and team members. This may include technical assessments for specialized roles.
-                    </p>
-                  </div>
-                </div>
-                
-                {/* Step 4 */}
-                <div className="relative flex items-start group">
-                  <div className="flex flex-col items-center mr-4">
-                    <div className="rounded-full bg-blue-600 text-white w-8 h-8 flex items-center justify-center z-10">
-                      4
-                    </div>
-                  </div>
-                  <div className="bg-gray-50 p-4 rounded-lg w-full">
-                    <h3 className="text-xl font-semibold mb-2">Offer & Onboarding</h3>
-                    <p className="text-gray-700">
-                      Successful candidates will receive a job offer. Once accepted, our HR team will guide you through the onboarding process to ensure a smooth transition into your new role at Trusty Group.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* No Openings CTA */}
-      <div className="py-16 bg-gray-50 ">
-        <div className="container mx-auto px-4 max-w-4xl text-center">
-          <h2 className="text-2xl font-bold mb-4 text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-200">Don't See the Right Position?</h2>
-          <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-            We're always looking for talented individuals who share our vision and values. Send us your resume, and we'll keep it on file for future opportunities.
-          </p>
-          <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-200">
-            <form className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="full-name" className="block text-sm font-medium text-gray-700 mb-1">
-                    Full Name*
-                  </label>
-                  <input
-                    type="text"
-                    id="full-name"
-                    name="full-name"
-                    className="w-full p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
-                    required
-                  />
-                </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                    Email Address*
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    className="w-full p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
-                    required
-                  />
-                </div>
-              </div>
-              <div>
-                <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
-                  Phone Number
-                </label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  className="w-full p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
-                />
-              </div>
-              <div>
-                <label htmlFor="preferred-area" className="block text-sm font-medium text-gray-700 mb-1">
-                  Preferred Area of Interest*
-                </label>
-                <select
-                  id="preferred-area"
-                  name="preferred-area"
-                  className="w-full p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
-                  required
-                >
-                  <option value="">Select an option</option>
-                  <option value="Trusty Group">Trusty Group (Main Company)</option>
-                  <option value="Trusty Construction">Trusty Construction</option>
-                  <option value="Trusty Estates">Trusty Estates</option>
-                  <option value="Trusty Pictures">Trusty Pictures</option>
-                  <option value="Trusty Technologies">Trusty Technologies</option>
-                  <option value="Trusty Fashion">Trusty Fashion</option>
-                  <option value="Trusty Trade & Commerce">Trusty Trade & Commerce</option>
-                </select>
-              </div>
-              <div>
-                <label htmlFor="resume" className="block text-sm font-medium text-gray-700 mb-1">
-                  Upload Resume/CV*
-                </label>
-                <input
-                  type="file"
-                  id="resume"
-                  name="resume"
-                  accept=".pdf,.doc,.docx"
-                  className="w-full p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
-                  required
-                />
-                <p className="text-xs text-gray-500 mt-1">Accepted formats: PDF, DOC, DOCX (Max 5MB)</p>
-              </div>
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-                  Message (Optional)
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows="4"
-                  className="w-full p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
-                  placeholder="Tell us a bit about yourself and why you're interested in joining Trusty Group..."
-                ></textarea>
-              </div>
-              <div className="flex items-start">
-                <input
-                  id="privacy-policy"
-                  name="privacy-policy"
-                  type="checkbox"
-                  className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded mt-1"
-                  required
-                />
-                <label htmlFor="privacy-policy" className="ml-2 block text-sm text-gray-700">
-                  I agree to the Trusty Group's <a href="#" className="text-blue-600 hover:underline">Privacy Policy</a> and consent to having my data processed for recruitment purposes.
-                </label>
-              </div>
-              <div>
-                <button
-                  type="submit"
-                  className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition"
-                >
-                  Submit Application
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-
-      {/* FAQs Section */}
-      <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
-      <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl font-bold mb-4 text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-200">
-            Frequently Asked Questions
-          </h2>
-          <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-            Find answers to common questions about Trusty Group
-          </p>
-          
-          {faqCategories.map((category, categoryIndex) => (
-            <div key={categoryIndex} className="mb-12">
-              <h3 className="text-2xl font-bold mb-6 text-gray-800">{category.title}</h3>
-              
-              <div className="space-y-4">
-                {category.items.map((faq, index) => {
-                  // Create a unique index for each FAQ across all categories
-                  const globalIndex = categoryIndex * 100 + index;
-                  
-                  return (
-                    <div 
-                      key={globalIndex} 
-                      className="border border-gray-200 rounded-xl overflow-hidden bg-white shadow-sm hover:shadow-md transition-shadow duration-300"
+              {/* Steps - Enhanced design */}
+              <div className="space-y-12 relative">
+                {[
+                  {
+                    number: 1,
+                    title: "Application Submission",
+                    description: "Email your resume/CV to niganzealain@gmail.com with the subject line containing the position you're applying for. Include a brief cover letter explaining your qualifications and interest in our mission."
+                  },
+                  {
+                    number: 2,
+                    title: "Initial Screening",
+                    description: "Our hiring team will review your application. If your qualifications match our needs, we'll contact you for a brief phone or video interview to learn more about your background and experience."
+                  },
+                  {
+                    number: 3,
+                    title: "In-Depth Interview",
+                    description: "Qualified candidates will be invited for a comprehensive interview with the hiring manager and team members. This may include technical assessments for specialized roles."
+                  },
+                  {
+                    number: 4,
+                    title: "Offer & Onboarding",
+                    description: "Successful candidates will receive a job offer. Once accepted, our HR team will guide you through the onboarding process to ensure a smooth transition into your new role at Trusty Group."
+                  }
+                ].map((step, index) => (
+                  <motion.div 
+                    key={index} 
+                    className="relative flex flex-col md:flex-row items-start group"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.2 }}
+                    viewport={{ once: true }}
+                  >
+                    {/* Step number bubble - Enhanced with animations */}
+                    <motion.div 
+                      className="h-16 w-16 rounded-full bg-indigo-600 text-white flex items-center justify-center text-xl font-bold z-10 mb-4 md:mb-0 md:mr-8 shadow-md"
+                      whileHover={{ 
+                        scale: 1.1,
+                        backgroundColor: "#4338ca"
+                      }}
                     >
-                      <button
-                        className="w-full flex justify-between items-center p-5 text-left focus:outline-none"
-                        onClick={() => toggleFAQ(globalIndex)}
-                      >
-                        <h4 className="text font-semibold text-gray-800">{faq.question}</h4>
-                        <motion.div
-                          animate={{ rotate: activeIndex === globalIndex ? 180 : 0 }}
-                          transition={{ duration: 0.3 }}
-                          className="text-blue-600 flex-shrink-0"
-                        >
-                          <ChevronDown size={24} />
-                        </motion.div>
-                      </button>
-                      
-                      <AnimatePresence>
-                        {activeIndex === globalIndex && (
-                          <motion.div
-                            initial={{ height: 0, opacity: 0 }}
-                            animate={{ height: "auto", opacity: 1 }}
-                            exit={{ height: 0, opacity: 0 }}
-                            transition={{ duration: 0.3 }}
-                          >
-                            <div className="p-5 pt-0 border-t border-gray-100">
-                              <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
-                            </div>
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
+                      {step.number}
+                    </motion.div>
+                    
+                    <div className="bg-white p-6 rounded-xl shadow-sm w-full hover:shadow-md transition-all">
+                      <h3 className="text-xl font-semibold mb-3 text-indigo-600 group-hover:text-indigo-700 transition-colors">
+                        {step.title}
+                      </h3>
+                      <p className="text-gray-700 leading-relaxed">
+                        {step.description}
+                      </p>
                     </div>
-                  );
-                })}
+                  </motion.div>
+                ))}
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+
+     
+
+      {/* Improved Call-to-Action - Enhanced with better visuals and animation */}
+      <div className="py-20 bg-gradient-to-br from-indigo-600 to-blue-700 text-white relative overflow-hidden">
+        {/* Background elements */}
+        <div className="absolute inset-0 overflow-hidden opacity-20">
+          <svg
+            width="100%"
+            height="100%"
+            viewBox="0 0 800 800"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g fill="none" stroke="white" strokeWidth="2">
+              <circle cx="400" cy="400" r="200" />
+              <circle cx="400" cy="400" r="250" />
+              <circle cx="400" cy="400" r="300" />
+              <circle cx="400" cy="400" r="350" />
+            </g>
+          </svg>
+        </div>
+        
+        {/* Floating particles */}
+        <div className="absolute inset-0">
+          {[...Array(10)].map((_, i) => (
+            <motion.div
+              key={i}
+              className="absolute h-2 w-2 bg-white rounded-full"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                opacity: Math.random() * 0.3 + 0.1
+              }}
+              animate={{
+                y: [0, Math.random() * -30 - 10],
+                x: [0, Math.random() * 20 - 10]
+              }}
+              transition={{
+                duration: Math.random() * 2 + 3,
+                repeat: Infinity,
+                repeatType: "reverse",
+                ease: "easeInOut"
+              }}
+            />
           ))}
         </div>
-      </div>
-    </section>
-
-      {/* Testimonials Section */}
-      <div className="py-16 bg-gray-50 mx-8 md:mx-16 lg:mx-24">
-        <div className="container mx-auto px-4">
-          <h2 className="text-2xl font-bold mb-4 text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-200">What Our Team Says</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
-                  <span className="text-blue-600 font-bold text-xl">JK</span>
-                </div>
-                <div className="ml-4">
-                  <h3 className="font-semibold">Jean Kwizera</h3>
-                  <p className="text-gray-600 text-sm">Senior Engineer, Trusty Construction</p>
-                </div>
-              </div>
-              <p className="text-gray-700 italic">
-                "Working at Trusty Construction has given me the opportunity to contribute to meaningful projects that are transforming communities across Rwanda. The supportive environment and emphasis on innovation have helped me grow professionally."
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
-                  <span className="text-blue-600 font-bold text-xl">DM</span>
-                </div>
-                <div className="ml-4">
-                  <h3 className="font-semibold">Diana Mutoni</h3>
-                  <p className="text-gray-600 text-sm">Marketing Manager, Trusty Group</p>
-                </div>
-              </div>
-              <p className="text-gray-700 italic">
-                "The best part about Trusty Group is how they value their employees as trustees. There's a true sense of ownership and collective purpose. I've had opportunities to work across different subsidiaries, which has broadened my skillset tremendously."
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
-                  <span className="text-blue-600 font-bold text-xl">EM</span>
-                </div>
-                <div className="ml-4">
-                  <h3 className="font-semibold">Eric Mugisha</h3>
-                  <p className="text-gray-600 text-sm">Developer, Trusty Technologies</p>
-                </div>
-              </div>
-              <p className="text-gray-700 italic">
-                "As a developer at Trusty Technologies, I'm encouraged to innovate and explore new solutions. The company invests in our growth with training opportunities and challenging projects that make a real difference in how our other subsidiaries operate."
-              </p>
-            </div>
+        
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="max-w-2xl mx-auto text-center">
+            <motion.h3 
+              className="text-xl md:text-4xl font-serif mb-3"
+              initial={{ opacity: 0, y: -20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              Ready to Build a Meaningful Career with Trusty Group?
+            </motion.h3>
+            <motion.p 
+              className="text-xl md:text-xl opacity-90 mb-3"
+              initial={{ opacity: 0, y: -20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              Join our team of dedicated professionals working to create positive change and build thriving communities worldwide.
+            </motion.p>
+            <motion.div 
+              className="flex flex-col sm:flex-row gap-4 justify-center"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+            >
+              <motion.a 
+                href="#openings" 
+                className="bg-white text-indigo-700 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition shadow-lg flex items-center justify-center"
+                whileHover={{ 
+                  scale: 1.05, 
+                  boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)" 
+                }}
+                whileTap={{ scale: 0.98 }}
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                View Open Positions
+              </motion.a>
+              
+              <motion.a 
+                href="mailto:carrertrustgroup@gmail.com" 
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-700 transition flex items-center justify-center"
+                whileHover={{ 
+                  scale: 1.05, 
+                  backgroundColor: "rgba(255, 255, 255, 1)",
+                  color: "#4338ca"
+                }}
+                whileTap={{ scale: 0.98 }}
+              >
+                <Mail className="h-5 w-5 mr-2" />
+                Contact Recruiting
+              </motion.a>
+            </motion.div>
           </div>
         </div>
       </div>
 
-      {/* Contact Us CTA */}
-      <div className="relative py-14 text-white overflow-hidden">
-      {/* Base background color */}
-      <div className="absolute inset-0 bg-blue-600 z-0"></div>
-      
-      {/* Wave pattern overlay */}
-      <div className="absolute inset-0 z-10 opacity-20">
-        <svg className="w-full h-full" viewBox="0 0 1440 320" preserveAspectRatio="none">
-          <path 
-            fill="#ffffff" 
-            fillOpacity="1" 
-            d="M0,192L48,176C96,160,192,128,288,133.3C384,139,480,181,576,186.7C672,192,768,160,864,144C960,128,1056,128,1152,149.3C1248,171,1344,213,1392,234.7L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-          ></path>
-        </svg>
-      </div>
-      
-      {/* Zigzag pattern */}
-      <div className="absolute inset-0 z-10 opacity-10">
-        <svg className="w-full h-full" width="100%" height="100%" viewBox="0 0 1200 300" preserveAspectRatio="none">
-          <path 
-            d="M0,100 L100,150 L200,100 L300,150 L400,100 L500,150 L600,100 L700,150 L800,100 L900,150 L1000,100 L1100,150 L1200,100 L1200,300 L0,300 Z" 
-            fill="#ffffff"
-          ></path>
-        </svg>
-      </div>
-      
-      {/* Content container */}
-      <div className="container relative z-20 mx-auto px-4 text-center">
-        <motion.h2 
-          className="text-xl font-bold mb-4"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          Have Questions?
-        </motion.h2>
-        
-        <motion.p 
-          className="text mb-10 max-w-2xl mx-auto"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-        >
-          Our recruitment team is here to help you navigate your career journey with Trusty Group.
-        </motion.p>
-        
-        <div className="flex flex-wrap justify-center gap-6">
-          <motion.a 
-            href="mailto:careers@trustygroup.com" 
-            className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold shadow-md hover:shadow-lg transition-all flex items-center"
-            whileHover={{ scale: 1.05, backgroundColor: '#f8fafc' }}
-            whileTap={{ scale: 0.98 }}
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-          >
-            <Mail className="h-5 w-5 mr-2" />
-            Email Us
-          </motion.a>
+      {/* New: Success Stories Section - Adding a testimonial section */}
+      <div className="py-20 bg-white">
+        <div className="container mx-auto px-6">
+          <h2 className="text-xl font-bold mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-blue-500">
+            Employee Success Stories
+          </h2>
           
-          <motion.a 
-            href="tel:+250781234567" 
-            className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold shadow-md hover:shadow-lg transition-all flex items-center"
-            whileHover={{ scale: 1.05, backgroundColor: '#f8fafc' }}
-            whileTap={{ scale: 0.98 }}
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.6 }}
-          >
-            <Phone className="h-5 w-5 mr-2" />
-            Call Us
-          </motion.a>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {[
+              {
+                name: "David Murenzi",
+                role: "Senior Project Manager, Trusty Construction",
+                image: Profiler,
+                quote: "Since joining Trusty Group four years ago, I've had the opportunity to lead major construction projects that have transformed communities. The collaborative culture and focus on excellence has allowed me to grow both professionally and personally."
+              },
+              {
+                name: "Sarah Uwimana",
+                role: "Software Developer, Trusty Technologies",
+                image: Profiler,
+                quote: "Starting as a junior developer, I've been able to advance my skills and take on leadership responsibilities in just two years. The mentorship program and investment in continuous learning sets Trusty Group apart from other employers."
+              },
+              {
+                name: "Jean-Paul Habimana",
+                role: "Marketing Director, Trusty Group",
+                image: Profiler,
+                quote: "Working across multiple subsidiaries has given me a unique perspective on how integrated business approaches can create greater impact. The values-driven culture and commitment to community development makes this more than just a job."
+              }
+            ].map((testimonial, index) => (
+              <motion.div 
+                key={index}
+                className="bg-gray-50 rounded-xl p-8 shadow-sm hover:shadow-md transition-all relative"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -5 }}
+              >
+                <div className="absolute top-0 right-0 bg-indigo-600 w-16 h-16 rounded-bl-xl rounded-tr-xl flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+                  </svg>
+                </div>
+                <div className="mb-6 flex items-center">
+                  <img src={testimonial.image} alt={testimonial.name} className="w-14 h-14 rounded-full object-cover mr-4 border-2 border-indigo-600" />
+                  <div>
+                    <h3 className="font-semibold text-gray-800">{testimonial.name}</h3>
+                    <p className="text-indigo-600 text-sm">{testimonial.role}</p>
+                  </div>
+                </div>
+                <blockquote className="text-gray-700 italic leading-relaxed">
+                  "{testimonial.quote}"
+                </blockquote>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
+
+      {/* Contact Information Section - Enhanced with better layout and visuals */}
+      <div className="py-20 bg-gray-50">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-blue-500">
+              Contact Our Recruitment Team
+            </h2>
+            
+            <div className="bg-white rounded-xl shadow-md overflow-hidden">
+              <div className="grid md:grid-cols-5">
+                {/* Map or Image Section */}
+                <div className="md:col-span-2 bg-indigo-600 p-8 text-white flex flex-col justify-center items-center text-center">
+                  <div className="mb-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 mx-auto opacity-80" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-semibold mb-2">Trusty Group Headquarters</h3>
+                  <p className="opacity-80 leading-relaxed">
+                    KN 2 St, Kigali<br />
+                    Rwanda<br />
+                    East Africa
+                  </p>
+                  <div className="mt-6 pt-6 border-t border-indigo-500 w-full">
+                    <p className="opacity-80 text-sm">
+                      Mon - Fri: 8:00 AM - 6:00 PM<br />
+                      Sat: 9:00 AM - 1:00 PM<br />
+                      Sun: Closed
+                    </p>
+                  </div>
+                </div>
+                
+                {/* Contact Information */}
+                <div className="md:col-span-3 p-8">
+                  <h3 className="text-xl font-semibold mb-6 text-indigo-600">Get in Touch</h3>
+                  
+                  <div className="space-y-6">
+                    <div className="flex items-start">
+                      <div className="w-10 h-10 rounded-lg bg-indigo-100 flex items-center justify-center mr-4 flex-shrink-0">
+                        <Mail className="h-5 w-5 text-indigo-600" />
+                      </div>
+                      <div>
+                        <h4 className="font-medium text-gray-800 mb-1">Email</h4>
+                        <p className="text-gray-600">
+                          <a 
+                            href="mailto:niganzealain@gmail.com" 
+                            className="hover:text-indigo-600 transition-colors"
+                          >
+                          carrertrustgroup@gmail.com
+                          </a>
+                        </p>
+                        <p className="text-sm text-gray-500 mt-1">For job inquiries and applications</p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-start">
+                      <div className="w-10 h-10 rounded-lg bg-indigo-100 flex items-center justify-center mr-4 flex-shrink-0">
+                        <Phone className="h-5 w-5 text-indigo-600" />
+                      </div>
+                      <div>
+                        <h4 className="font-medium text-gray-800 mb-1">Phone</h4>
+                        <p className="text-gray-600">
+                          <a 
+                            href="tel:+250780000000" 
+                            className="hover:text-indigo-600 transition-colors"
+                          >
+                            +250 780 000 000
+                          </a>
+                        </p>
+                        <p className="text-sm text-gray-500 mt-1">Monday to Friday, 8am to 6pm</p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-start">
+                      <div className="w-10 h-10 rounded-lg bg-indigo-100 flex items-center justify-center mr-4 flex-shrink-0">
+                        <ExternalLink className="h-5 w-5 text-indigo-600" />
+                      </div>
+                      <div>
+                        <h4 className="font-medium text-gray-800 mb-1">Website</h4>
+                        <p className="text-gray-600">
+                          <a 
+                            href="https://trustygroup.com" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="hover:text-indigo-600 transition-colors"
+                          >
+                            www.trustygroup.com
+                          </a>
+                        </p>
+                        <p className="text-sm text-gray-500 mt-1">Visit our main website for more information</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="mt-10 pt-6 border-t border-gray-100">
+                    <h4 className="font-medium text-gray-800 mb-4">Follow Us</h4>
+                    <div className="flex space-x-4">
+      {socialIcons.map((social, index) => (
+        <a 
+          key={index}
+          href="#" 
+          className="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center hover:bg-indigo-600 hover:text-white transition-colors text-indigo-600"
+        >
+          <svg 
+            className="h-5 w-5" 
+            viewBox="0 0 24 24" 
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path d={social.path} />
+          </svg>
+        </a>
+      ))}
     </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

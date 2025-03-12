@@ -19,6 +19,7 @@ import {
   Sparkles,
   Stars,
   Quote, Star, User
+  
 
 } from "lucide-react";
 
@@ -342,9 +343,9 @@ function Home() {
             >
               Our Impact in Numbers
               <motion.div
-                className="absolute -right-8 -top-2 text-yellow-300"
+                className="absolute mr-auto text-yellow-300"
                 animate={{
-                  rotate: [0, 15, 0, -15, 0],
+                  rotate: [0, 15, 0, -19, 0],
                   scale: [1, 1.2, 1, 1.2, 1],
                 }}
                 transition={{
@@ -419,7 +420,7 @@ function Home() {
               transition={{ delay: 0.5, duration: 1 }}
             >
               <p
-                className="text-white text-lg italic relative inline-block"
+                className="text-white text italic relative inline-block"
                 style={{ fontFamily: "Monda, sans-serif" }}
               >
                 At Trusty Group, we're here to serve you with excellence and{" "}
