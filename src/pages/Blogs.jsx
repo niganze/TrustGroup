@@ -159,7 +159,7 @@ function Blog() {
       <div className="container mx-auto px-6 md:px-8 lg:px-12 max-w-7xl">
         
       <div className="text-center mb-16 bg-[#00A3D9] py-12 px-4 rounded-lg">
-  <h2 className="text-4xl font-bold text-white mb-4">Trusty Group Blog</h2>
+  <h2 className="text-4xl font-bold text-white mb-4 font-heading">Trusty Group Blog</h2>
   <div className="w-24 h-1 bg-white mx-auto mb-6 rounded-full"></div>
   <p className="text-white max-w-2xl mx-auto">
     Stay updated with the latest news, industry insights, and expert advice from Trusty Group.
@@ -169,7 +169,7 @@ function Blog() {
         {activeCategory === 'all' && searchQuery === '' && (
           <div className="mb-20">
             <div className="flex items-center justify-between mb-8">
-              <h3 className="text-2xl font-bold text-gray-900">Featured Articles</h3>
+              <h3 className="text-2xl font-bold text-gray-900 font-heading">Featured Articles</h3>
               <div className="h-px bg-gray-200 flex-grow ml-6 hidden md:block"></div>
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -378,11 +378,11 @@ function Blog() {
         )}
         
         {/* Newsletter Signup - improved design */}
-        <div className="mt-20 rounded-xl overflow-hidden shadow-lg">
+        <div className="mt-3 rounded-xl overflow-hidden shadow-lg">
           <div className="bg-gradient-to-r from-[#00A3D9] to-blue-600 p-10 text-white text-center relative">
             <div className="absolute top-0 left-0 w-full h-full opacity-10 bg-pattern"></div>
             <div className="relative z-10 max-w-2xl mx-auto">
-              <h3 className="text-3xl font-bold mb-3">Subscribe to Our Newsletter</h3>
+              <h3 className="text-3xl font-bold mb-3 font-heading">Subscribe to Our Newsletter</h3>
               <div className="w-16 h-1 bg-white mx-auto mb-6 rounded-full"></div>
               <p className="mb-8 text-blue-50">
                 Stay up-to-date with the latest insights, news, and tips from Trusty Group. We'll send you valuable content directly to your inbox.

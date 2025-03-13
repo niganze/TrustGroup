@@ -157,14 +157,13 @@ function Home() {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <h1
-              className="text-5xl md:text-7xl font-bold text-white mb-6"
-              style={{ fontFamily: "Agency FB" }}
+              className="text-5xl md:text-7xl font-bold text-white mb-6 animate-float font-heading"
             >
               TRUSTY GROUP
             </h1>
             <p
-              className="text-xl md:text-2xl text-white mb-8"
-              style={{ fontFamily: "Monda" }}
+              className="text-xl md:text-2xl text-white mb-8 font-body"
+              
             >
               Building Excellence Through Innovation and Integrity
             </p>
@@ -265,7 +264,7 @@ function Home() {
               className="bg-white rounded-lg shadow-lg p-8 relative"
             >
               <h3
-                className="text-2xl font-bold text-gray-800 mb-6 animate-bounce"
+                className="text-2xl font-bold text-gray-800 mb-6 animate-bounce cursor-pointer"
                 style={{ fontFamily: "Agency FB, sans-serif" }}
               >
                 Our Mission
@@ -300,7 +299,7 @@ function Home() {
               className="bg-white rounded-lg shadow-lg p-8 relative"
             >
               <h3
-                className="text-2xl font-bold  bg-clip-text bg-gradient-to-r from-[#00A3D9] via-[#0eabff] to-[#0077b6] mb-6 animate-pulse drop-shadow-lg tracking-wider relative"
+                className="text-2xl font-bold  bg-clip-text bg-gradient-to-r from-[#00A3D9] via-[#0eabff] to-[#0077b6] mb-6 animate-pulse drop-shadow-lg tracking-wider relative cursor-pointer"
                 style={{ fontFamily: "Agency FB, sans-serif" }}
               >
                 Our Vision
@@ -308,8 +307,8 @@ function Home() {
               <div className="w-12 h-1 bg-[#00A3D9] mb-6 rounded-full"></div>
 
               <p
-                className="text-gray-700 leading-relaxed"
-                style={{ fontFamily: "Monda, sans-serif" }}
+                className="text-gray-700 leading-relaxed font-body"
+                
               >
                 To be the world's leading catalyst for transformative growth
                 through investment, creating a future where vibrant communities
@@ -1124,11 +1123,11 @@ function Home() {
             variants={fadeIn}
             className="text-center mb-12"
           >
-            <h2 className="text-4xl font-bold mb-4 text-black">CONTACT US</h2>
+            <h2 className="text-4xl font-bold mb-4 text-black font-heading">CONTACT US</h2>
             <div className="w-20 h-1 bg-[#00A3D9] mx-auto mb-6"></div>
             <p
-              className="text-gray-600 max-w-2xl mx-auto"
-              style={{ fontFamily: "Monda" }}
+              className="text-gray-600 max-w-2xl mx-auto font-body"
+        
             >
               Get in touch with our team to discuss your next project
             </p>
@@ -1327,7 +1326,7 @@ function Home() {
               ></div>
             </h2>
 
-            <p className="text-blue-100 mb-8" style={{ fontFamily: "Monda" }}>
+            <p className="text-blue-100 mb-8 " style={{ fontFamily: "Monda" }}>
               Contact us today to discuss how Trusty Group can bring your vision
               to life
             </p>

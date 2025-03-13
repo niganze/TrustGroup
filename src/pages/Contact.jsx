@@ -190,7 +190,7 @@ const Contact = () => {
           </div>
         </div>
         
-        <div className="container mx-auto px-4 text-center relative z-10">
+        <div className="container mx-auto px-4 text-center relative z-10 font-heading">
           <motion.h1 
             className="text-5xl md:text-6xl font-bold mb-6 tracking-tight"
             initial={{ opacity: 0, y: -20 }}
@@ -336,19 +336,19 @@ const Contact = () => {
               >
                 <div className="flex flex-col md:flex-row md:items-center mb-8 border-b border-gray-100 pb-8">
                   <div className="md:w-1/2 mb-6 md:mb-0 md:pr-8">
-                    <h2 className="text-3xl font-bold mb-4 text-gray-800">Send Us a Message</h2>
-                    <p className="text-gray-600">
+                    <h2 className="text-3xl font-bold mb-4 text-gray-800 font-heading">Send Us a Message</h2>
+                    <p className="text-gray-600 font-body">
                       Fill out the form and our team will get back to you as soon as possible. We're here to help with any questions you might have.
                     </p>
                   </div>
                   <div className="md:w-1/2 bg-blue-50 p-6 rounded-xl border border-blue-100">
-                    <h3 className="font-medium text-blue-800 mb-2 flex items-center">
+                    <h3 className="font-medium text-blue-800 mb-2 flex items-center font-heading">
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-blue-600" viewBox="0 0 20 20" fill="currentColor">
                         <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
                       </svg>
                       Get a quick response
                     </h3>
-                    <p className="text-sm text-gray-600">
+                    <p className="text-sm text-gray-600 font-body">
                       Our team typically responds within 24 hours during business days. For urgent matters, please call us directly.
                     </p>
                   </div>
@@ -536,28 +536,28 @@ const Contact = () => {
                 transition={{ duration: 0.5 }}
               >
                 <div className="p-8">
-                  <h2 className="text-3xl font-bold mb-6 text-gray-800">Visit Our Offices</h2>
-                  <p className="text-gray-600 mb-8">
+                  <h2 className="text-3xl font-bold mb-6 text-gray-800 font-heading">Visit Our Offices</h2>
+                  <p className="text-gray-600 mb-8 font-body">
                     We'd love to meet you in person at one of our office locations.
                   </p>
                 </div>
                 
                 {/* Interactive Map */}
                 <div className="h-96 mb-6 rounded-lg overflow-hidden">
-                  <div className="w-full h-full">
-                    <iframe
-                      width="100%"
-                      height="100%"
-                      frameBorder="0"
-                      scrolling="no"
-                      marginHeight="0"
-                      marginWidth="0"
-                      src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=KN%2027%20Street%205,%20Kigali,%20RW+(Trusty%20Group%20Ltd)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-                      title="Trusty Group Office Location"
-                      className="w-full h-full"
-                    ></iframe>
-                  </div>
-                </div>
+  <div className="w-full h-full">
+    <iframe
+      width="100%"
+      height="100%"
+      frameBorder="0"
+      scrolling="no"
+      marginHeight="0"
+      marginWidth="0"
+      src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=KN%201%20Rd,%20Kigali,%20Rwanda+(Trust%20Group)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+      title="Trusty Group Office Location"
+      className="w-full h-full"
+    ></iframe>
+  </div>
+</div>
                 
                 <div className="p-8">
                   <div className="grid md:grid-cols-2 gap-6">
@@ -576,7 +576,7 @@ const Contact = () => {
                           </svg>
                         </div>
                         <div>
-                          <h3 className="text-xl font-bold mb-2 text-gray-800">Headquarters</h3>
+                          <h3 className="text-xl font-bold mb-2 text-gray-800 font-heading">Headquarters</h3>
                           <address className="not-italic text-gray-600">
                             KN 27 Street 5<br />
                             Kigali, Rwanda<br />
@@ -606,7 +606,7 @@ const Contact = () => {
                           </svg>
                         </div>
                         <div>
-                          <h3 className="text-xl font-bold mb-2 text-gray-800">Regional Office</h3>
+                          <h3 className="text-xl font-bold mb-2 text-gray-800 font-heading">Regional Office</h3>
                           <address className="not-italic text-gray-600">
                             123 Business Park<br />
                             Nairobi, Kenya<br />
@@ -633,7 +633,7 @@ const Contact = () => {
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <motion.h2 
-              className="text-3xl font-bold mb-6 text-gray-800"
+              className="text-3xl font-bold mb-6 text-gray-800 font-heading"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
@@ -641,7 +641,7 @@ const Contact = () => {
               Our Subsidiaries
             </motion.h2>
             <motion.p 
-              className="text-gray-600"
+              className="text-gray-600 font-body"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.2 }}
@@ -756,8 +756,8 @@ const Contact = () => {
                 <div className="absolute bottom-0 left-0 w-48 h-48 bg-indigo-900 opacity-20 rounded-full -mb-10 -ml-10"></div>
                 
                 <div className="relative z-10">
-                  <h3 className="text-2xl font-bold mb-4">Stay Updated with Trusty Group</h3>
-                  <p className="mb-6 text-blue-100">
+                  <h3 className="text-2xl font-bold mb-4 font-heading">Stay Updated with Trusty Group</h3>
+                  <p className="mb-6 text-blue-100 bont-body">
                     Subscribe to our newsletter to receive company news, event invitations, and exclusive offers.
                   </p>
                   
@@ -784,7 +784,7 @@ const Contact = () => {
                     </motion.button>
                   </div>
                   
-                  <p className="text-xs mt-4 text-blue-200">
+                  <p className="text-xs mt-4 text-blue-200 font-body">
                     By subscribing, you agree to our <a href="#" className="underline hover:text-white">Privacy Policy</a>. You can unsubscribe at any time.
                   </p>
                 </div>
@@ -799,7 +799,7 @@ const Contact = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
               >
-                <h3 className="text-2xl font-bold mb-6 text-gray-800">Frequently Asked Questions</h3>
+                <h3 className="text-2xl font-bold mb-6 text-gray-800 ">Frequently Asked Questions</h3>
                 
                 <div className="space-y-4">
                   <div className="border-b border-gray-100 pb-4">

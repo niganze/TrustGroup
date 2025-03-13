@@ -184,9 +184,9 @@ function Projects() {
           transition={{ duration: 0.8 }}
           className="text-center mb-10 md:mb-16"
         >
-          <h2 className="text-2xl md:text-5xl font-bold text-gray-500 mb-4">Our <span className="text-[#00A3D9]">Projects</span></h2>
+          <h2 className="text-2xl md:text-5xl font-bold text-gray-500 mb-4 font-heading ">Our <span className="text-[#00A3D9] font-heading">Projects</span></h2>
           <div className="w-16 md:w-24 h-1 bg-[#00A3D9] mx-auto mb-4 md:mb-6"></div>
-          <p className="text md:text-lg text-gray-600 max-w-3xl mx-auto leading-normal px-2">
+          <p className="text md:text-lg text-gray-600 max-w-3xl mx-auto leading-normal px-2 font-body">
             Explore our portfolio of innovative construction and real estate projects through 
             Trusty Construction and Trusty Estates. Each project reflects our commitment 
             to excellence, innovation, and client satisfaction.
@@ -231,7 +231,7 @@ function Projects() {
                     {featuredProjects[currentSlide].status === 'completed' ? 'Completed' : 'Ongoing'}
                   </span>
                   <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2 md:mb-4">{featuredProjects[currentSlide].name}</h3>
-                  <p className="text-sm md:text-base mb-3 md:mb-4 opacity-90 line-clamp-2 hidden sm:block">{featuredProjects[currentSlide].description}</p>
+                  <p className="text-sm md:text-base mb-3 md:mb-4 opacity-90 line-clamp-2 hidden sm:block font-body">{featuredProjects[currentSlide].description}</p>
                   
                   <div className="flex flex-wrap gap-3 md:gap-6 mb-4 hidden sm:flex">
                     {featuredProjects[currentSlide].stats.map((stat, index) => (
@@ -325,8 +325,8 @@ function Projects() {
                   <svg className="w-12 h-12 md:w-16 md:h-16 text-gray-400 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
-                  <h4 className="text-lg md:text-xl font-semibold text-gray-700 mb-2">No Projects Found</h4>
-                  <p className="text-gray-500">We couldn't find any projects in this category. Please try another filter.</p>
+                  <h4 className="text-lg md:text-xl font-semibold text-gray-700 mb-2 font-heading">No Projects Found</h4>
+                  <p className="text-gray-500 font-body">We couldn't find any projects in this category. Please try another filter.</p>
                 </div>
               ) : (
                 <motion.div 
@@ -416,7 +416,7 @@ function Projects() {
           </div>
           
           <div className="relative z-10">
-            <h3 className="text-2xl md:text-3xl font-bold mb-8 text-center">Our Impact in Numbers</h3>
+            <h3 className="text-2xl md:text-3xl font-bold mb-8 text-center font-heading">Our Impact in Numbers</h3>
             
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
               <div className="text-center">
@@ -440,29 +440,29 @@ function Projects() {
         </motion.div>
         
         {/* CTA Section */}
-        <motion.div 
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="mt-12 md:mt-16 bg-gradient-to-r from-[#00A3D9] to-[#0087b3] rounded-xl p-6 md:p-10 text-center text-white shadow-lg relative overflow-hidden"
-        >
-          <h3 className="text-xl md:text-3xl font-bold mb-3 md:mb-4">Have a Project in Mind?</h3>
-          <p className="text-white text-opacity-90 mb-6 max-w-2xl mx-auto text-sm md:text-base">
-            Whether you're looking to build, renovate, or invest, our team at Trusty Group is ready to bring your vision to life. Let's create something extraordinary together.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <button className="bg-white text-[#00A3D9] px-6 py-3 rounded-full text-sm md:text-base font-medium hover:bg-gray-100 transition-all shadow-md">
-              Schedule a Consultation
-            </button>
-            <button className="bg-transparent border-2 border-white text-white px-6 py-3 rounded-full text-sm md:text-base font-medium hover:bg-white hover:bg-opacity-10 transition-all">
-              View More Projects
-            </button>
-          </div>
-          
-          {/* Decorative elements - contained within parent */}
-          <div className="absolute top-0 right-0 w-16 h-16 md:w-24 md:h-24 bg-white bg-opacity-10 rounded-full translate-x-1/2 -translate-y-1/2"></div>
-          <div className="absolute bottom-0 left-0 w-20 h-20 md:w-32 md:h-32 bg-white bg-opacity-5 rounded-full -translate-x-1/2 translate-y-1/2"></div>
-        </motion.div>
+<motion.div 
+  initial={{ opacity: 0, y: 30 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8 }}
+  className="mt-3 md:mt-16 mb-0 pb-0 bg-gradient-to-r from-[#00A3D9] to-[#0087b3] rounded-xl p-6 md:p-10 text-center text-white shadow-lg relative overflow-hidden"
+>
+  <h3 className="text-xl md:text-3xl font-bold mb-3 md:mb-4 font-heading">Have a Project in Mind?</h3>
+  <p className="text-white text-opacity-90 mb-6 max-w-2xl mx-auto text-sm md:text-base font-body">
+    Whether you're looking to build, renovate, or invest, our team at Trusty Group is ready to bring your vision to life. Let's create something extraordinary together.
+  </p>
+  <div className="flex flex-col sm:flex-row gap-3 justify-center">
+    <button className="bg-white text-[#00A3D9] px-6 py-3 rounded-full text-sm md:text-base font-medium hover:bg-gray-100 transition-all shadow-md">
+      Schedule a Consultation
+    </button>
+    <button className="bg-transparent border-2 border-white text-white px-6 py-3 rounded-full text-sm md:text-base font-medium hover:bg-white hover:bg-opacity-10 transition-all">
+      View More Projects
+    </button>
+  </div>
+  
+  {/* Decorative elements - contained within parent */}
+  <div className="absolute top-0 right-0 w-16 h-16 md:w-24 md:h-24 bg-white bg-opacity-10 rounded-full translate-x-1/2 -translate-y-1/2"></div>
+  <div className="absolute bottom-0 left-0 w-20 h-20 md:w-32 md:h-32 bg-white bg-opacity-5 rounded-full -translate-x-1/2 translate-y-1/2"></div>
+</motion.div>
       </div>
     </div>
   );

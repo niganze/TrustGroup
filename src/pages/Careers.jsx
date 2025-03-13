@@ -273,7 +273,7 @@ const Careers = () => {
       {/* Our Mission and Values Section - Improved layout and visual hierarchy */}
       <div id="mission" className="py-20 bg-white">
         <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-blue-500">Our Mission & Values</h2>
+          <h2 className="text-3xl font-bold mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-blue-500 font-heading">Our Mission & Values</h2>
           <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -336,7 +336,7 @@ const Careers = () => {
       {/* Why Join Us Section - Enhanced with more interactive elements */}
       <div className="py-20 bg-gray-50">
         <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-blue-500">Why Join Trusty Group?</h2>
+          <h2 className="text-3xl font-bold mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-blue-500 font-heading">Why Join Trusty Group?</h2>
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {[
               {
@@ -392,7 +392,7 @@ const Careers = () => {
       {/* Open Positions Section - Enhanced with better job card design */}
       <div id="openings" className="py-20 bg-white">
         <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-blue-500">Open Positions</h2>
+          <h2 className="text-3xl font-bold mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-blue-500 font-heading">Open Positions</h2>
           
           {/* Filter - Enhanced with better design */}
           <div className="mb-12 max-w-md mx-auto">
@@ -505,7 +505,7 @@ const Careers = () => {
       {/* Application Process - Modernized with better visuals */}
       <div className="py-20 bg-gray-50">
         <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-blue-500">Our Application Process</h2>
+          <h2 className="text-3xl font-bold mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-blue-500 font-heading">Our Application Process</h2>
           <div className="max-w-4xl mx-auto">
             <div className="relative">
               {/* Timeline line */}
@@ -619,7 +619,7 @@ const Careers = () => {
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-2xl mx-auto text-center">
             <motion.h3 
-              className="text-xl md:text-4xl font-serif mb-3"
+              className="text-xl md:text-4xl font-heading mb-3 "
               initial={{ opacity: 0, y: -20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -679,9 +679,9 @@ const Careers = () => {
       {/* New: Success Stories Section - Adding a testimonial section */}
       <div className="py-20 bg-white">
         <div className="container mx-auto px-6">
-          <h2 className="text-xl font-bold mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-blue-500">
+          <h3 className="text-3xl font-bold mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-blue-500 font-heading">
             Employee Success Stories
-          </h2>
+          </h3>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {[
@@ -738,7 +738,7 @@ const Careers = () => {
       <div className="py-20 bg-gray-50">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-blue-500">
+            <h2 className="text-3xl font-bold mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-blue-500 font-heading">
               Contact Our Recruitment Team
             </h2>
             

@@ -5,6 +5,10 @@ export const content = [
 ]
 export const theme = {
   extend: {
+    fontFamily: {
+      'heading': ['"Agency FB"', 'sans-serif'],
+      'body': ['Monda', 'sans-serif'],
+    },
     keyframes: {
       blob: {
         '0%': { transform: 'translate(0px, 0px) scale(1)' },

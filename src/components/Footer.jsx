@@ -56,7 +56,7 @@ const Footer = () => {
             viewport={{ once: true }}
             variants={fadeIn}
           >
-            <Link to="/" className="flex items-center mb-4">
+            <Link to="/" className="flex items-center mb-4 ">
               <motion.img 
                 src={Logo} 
                 alt="Trusty Group Logo" 
