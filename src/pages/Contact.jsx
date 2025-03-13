@@ -249,7 +249,7 @@ const Contact = () => {
             <div className="rounded-full bg-blue-50 w-16 h-16 flex items-center justify-center mb-4 ring-8 ring-blue-50/50">
               <Phone className="h-8 w-8 text-blue-600" />
             </div>
-            <h3 className="text-xl font-bold mb-2 text-gray-800">Call Us</h3>
+            <h3 className="text-xl font-bold mb-2 text-gray-800 font-heading">Call Us</h3>
             <p className="text-gray-600 mb-4">Mon-Fri from 8am to 5pm</p>
             <a href="tel:+250781234567" className="text-blue-600 font-medium group flex items-center">
               +250 781 234 567
@@ -268,7 +268,7 @@ const Contact = () => {
             <div className="rounded-full bg-indigo-50 w-16 h-16 flex items-center justify-center mb-4 ring-8 ring-indigo-50/50">
               <Mail className="h-8 w-8 text-indigo-600" />
             </div>
-            <h3 className="text-xl font-bold mb-2 text-gray-800">Email Us</h3>
+            <h3 className="text-xl font-bold mb-2 text-gray-800 font-heading">Email Us</h3>
             <p className="text-gray-600 mb-4">We'll respond as soon as possible</p>
             <a href="mailto:info@trustygroup.com" className="text-indigo-600 font-medium group flex items-center">
               info@trustygroup.com
@@ -287,7 +287,7 @@ const Contact = () => {
             <div className="rounded-full bg-purple-50 w-16 h-16 flex items-center justify-center mb-4 ring-8 ring-purple-50/50">
               <MessageSquare className="h-8 w-8 text-purple-600" />
             </div>
-            <h3 className="text-xl font-bold mb-2 text-gray-800">Live Chat</h3>
+            <h3 className="text-xl font-bold mb-2 text-gray-800 font-heading">Live Chat</h3>
             <p className="text-gray-600 mb-4">Chat with our customer support</p>
             <button className="bg-purple-50 text-purple-600 px-6 py-3 rounded-lg font-medium hover:bg-purple-100 transition-all duration-300 group flex items-center">
               Start Chat
@@ -801,7 +801,7 @@ SHEMA HOUSE, Second Floor<br />
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
               >
-                <h3 className="text-2xl font-bold mb-6 text-gray-800 ">Frequently Asked Questions</h3>
+                <h3 className="text-2xl font-bold mb-6 text-gray-800 font-heading">Frequently Asked Questions</h3>
                 
                 <div className="space-y-4">
                   <div className="border-b border-gray-100 pb-4">

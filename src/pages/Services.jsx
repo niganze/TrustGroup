@@ -223,7 +223,7 @@ function Services() {
           
           {/* Header content */}
           <h2 className="text-4xl font-bold mb-3 relative inline-block group">
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-800 relative z-10">Our Services</span>
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-800 relative z-10 font-heading">Our Services</span>
             
             {/* Animated underline on hover */}
             <div className="absolute bottom-0 left-0 h-1 w-full bg-gradient-to-r from-[#00A3D9] to-blue-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out origin-left"></div>
@@ -232,7 +232,7 @@ function Services() {
             <div className="absolute -inset-x-6 -inset-y-2 bg-gradient-to-r from-blue-50 to-cyan-50 rounded-lg opacity-70 blur-sm -z-10"></div>
           </h2>
           
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto relative z-10">
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto relative z-10 font-body">
             Discover the comprehensive range of services offered through our diverse portfolio of subsidiaries.
           </p>
         </motion.div>
@@ -295,7 +295,7 @@ function Services() {
               </div>
               <div>
                 <div className="flex items-center gap-3">
-                  <h3 className="text-3xl font-bold bg-gradient-to-r from-[#00A3D9] to-blue-600 bg-clip-text text-transparent">
+                  <h3 className="text-3xl font-bold bg-gradient-to-r from-[#00A3D9] to-blue-600 bg-clip-text text-transparent font-heading">
                     {activeSubsidiary.name}
                   </h3>
                   <span className="text-3xl">{activeSubsidiary.icon}</span>
@@ -312,7 +312,7 @@ function Services() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
               >
-                <h4 className="text-xl font-semibold text-gray-900 mb-4 pb-2 border-b border-gray-100">
+                <h4 className="text-xl font-semibold text-gray-900 mb-4 pb-2 border-b border-gray-100 font-heading">
                   Key Services
                 </h4>
                 <ul className="space-y-3">
@@ -342,7 +342,7 @@ function Services() {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: 0.3 }}
                 >
-                  <h4 className="text-xl font-semibold text-gray-900 mb-4 pb-2 border-b border-gray-100">
+                  <h4 className="text-xl font-semibold text-gray-900 mb-4 pb-2 border-b border-gray-100 font-heading">
                     Service Details
                   </h4>
                   <div className="space-y-4 overflow-y-auto max-h-96">
@@ -358,8 +358,8 @@ function Services() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.3, delay: 0.4 + index * 0.1 }}
                       >
-                        <h5 className="font-medium text-gray-900 text-lg">{detail.title}</h5>
-                        <p className="text-sm text-gray-600 mt-1">{detail.description}</p>
+                        <h5 className="font-medium text-gray-900 text-lg ">{detail.title}</h5>
+                        <p className="text-sm text-gray-600 mt-1 ">{detail.description}</p>
                         {detail.items && (
                           <motion.ul 
                             className="mt-2 ml-4 text-sm text-gray-700 list-disc space-y-1"
@@ -433,7 +433,7 @@ function Services() {
           
           <div className="relative z-5 p-5 text-white text-center">
             <motion.h3 
-              className="text-xl font-bold mb-2"
+              className="text-3xl font-bold mb-2 font-heading"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.6 }}
