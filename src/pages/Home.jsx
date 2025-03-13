@@ -157,7 +157,7 @@ function Home() {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <h1
-              className="text-5xl md:text-7xl font-bold text-white mb-6 animate-float font-heading"
+              className="text-5xl md:text-7xl font-bold text-white mb-6 animate-blob font-heading"
             >
               TRUSTY GROUP
             </h1>

@@ -287,7 +287,7 @@ function Projects() {
         
         {/* Project Categories */}
         <div className="mb-8 md:mb-12">
-          <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 md:mb-8 text-center">Explore Our <span className="text-[#00A3D9]">Portfolio</span></h3>
+          <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 md:mb-8 text-center font-heading">Explore Our <span className="text-[#00A3D9]">Portfolio</span></h3>
           
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
@@ -352,7 +352,7 @@ function Projects() {
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-60 transition-all duration-300"></div>
                           <div className="absolute top-2 right-2 flex gap-1">
-                            <span className="px-2 py-1 rounded-full text-xs font-semibold bg-gray-800 text-white">
+                            <span className="px-2 py-1 rounded-full text-xs font-semibold bg-gray-800 text-white font-heading">
                               {project.category === 'design' ? 'Design' : 'Build'}
                             </span>
                             <span className={`px-2 py-1 rounded-full text-xs font-semibold ${
@@ -369,7 +369,7 @@ function Projects() {
                           </div>
                         </div>
                         <div className="p-4 md:p-5">
-                          <h4 className="text-lg md:text-xl font-bold text-gray-900 mb-2 group-hover:text-[#00A3D9] transition-colors">{project.name}</h4>
+                          <h4 className="text-lg md:text-xl font-bold text-gray-900 mb-2 group-hover:text-[#00A3D9] transition-colors font-heading">{project.name}</h4>
                           <p className="text-sm text-gray-600 mb-3 line-clamp-2">{project.description}</p>
                           
                           <div className="flex flex-wrap gap-3 mb-3">
