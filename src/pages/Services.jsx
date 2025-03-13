@@ -455,19 +455,21 @@ function Services() {
               transition={{ duration: 0.5, delay: 0.8 }}
             >
               <motion.button 
-                className="bg-white text-blue-600 px-6 py-3 rounded-full font-medium hover:shadow-lg transition-all"
-                whileHover={{ scale: 1.05, boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1)" }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Contact Us
-              </motion.button>
-              <motion.button 
-                className="bg-transparent border-2 border-white px-6 py-3 rounded-full font-medium hover:bg-white hover:text-blue-600 transition-all duration-300"
-                whileHover={{ scale: 1.05, boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1)" }}
-                whileTap={{ scale: 0.95 }}
-              >
-                View Projects
-              </motion.button>
+  className="bg-white text-blue-600 px-6 py-3 rounded-full font-medium hover:shadow-lg transition-all"
+  whileHover={{ scale: 1.05, boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1)" }}
+  whileTap={{ scale: 0.95 }}
+  onClick={() => window.location.href = '/contact'}
+>
+  Contact Us
+</motion.button>
+<motion.button 
+  className="bg-transparent border-2 border-white px-6 py-3 rounded-full font-medium hover:bg-white hover:text-blue-600 transition-all duration-300"
+  whileHover={{ scale: 1.05, boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1)" }}
+  whileTap={{ scale: 0.95 }}
+  onClick={() => window.location.href = '/projects'}
+>
+  View Projects
+</motion.button>
             </motion.div>
           </div>
         </motion.div>

@@ -211,47 +211,6 @@ function Home() {
 
       {/* About Us Section */}
       <section id="about" className="pt-0 overflow-hidden">
-        {/* About Header with Diagonal Cut Background */}
-        <div className="relative bg-[#00829B] text-white pb-24">
-          <div className="container mx-auto px-4 pt-16 pb-8 text-center">
-            <motion.h2
-              initial={{ opacity: 0, y: -20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-4xl font-bold mb-3"
-              style={{ fontFamily: "Agency FB, sans-serif" }}
-            >
-              About Trusty Group
-            </motion.h2>
-            <motion.p
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="text-lg max-w-3xl mx-auto"
-              style={{ fontFamily: "Monda, sans-serif" }}
-            >
-              Established in 2017 with a mission to cultivate peace and
-              prosperity through strategic investments.
-            </motion.p>
-          </div>
-          {/* Diagonal cut */}
-          <div className="absolute bottom-0 left-0 right-0">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 1440 120"
-              className="w-full h-auto"
-            >
-              <path
-                fill="white"
-                fillOpacity="1"
-                d="M0,96L1440,32L1440,120L0,120Z"
-              ></path>
-            </svg>
-          </div>
-        </div>
-
         {/* Mission & Vision Section */}
         <div className="container mx-auto px-4 py-16">
           <div className="grid md:grid-cols-2 gap-12">
@@ -269,7 +228,7 @@ function Home() {
               >
                 Our Mission
               </h3>
-              <div className="w-12 h-1 bg-[#2fa9d2] mb-6 rounded-full"></div>
+              <div className="w-12 h-1 bg-[#00A3D9] mb-6 rounded-full"></div>
               <p
                 className="text-gray-700 leading-relaxed"
                 style={{ fontFamily: "Monda, sans-serif" }}
@@ -767,7 +726,7 @@ function Home() {
                 quality and sustainability
               </p>
               <Link
-                to="/construction"
+                to="services#construction"
                 className="text-[#00A3D9] font-semibold flex items-center group"
               >
                 <span className="group-hover:underline">Learn more</span>
@@ -828,7 +787,7 @@ function Home() {
                 Premium real estate development and property management services
               </p>
               <Link
-                to="/estates"
+                to="services#estates"
                 className="text-[#00A3D9] font-semibold flex items-center group"
               >
                 <span className="group-hover:underline">Learn more</span>
@@ -878,7 +837,7 @@ function Home() {
           </motion.div>
 
           {/* Subsidiaries Navigation */}
-          <div className="flex flex-wrap justify-center gap-6 mb-12">
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
             {subsidiaries.map((subsidiary) => (
               <button
                 key={subsidiary.id}
@@ -1097,14 +1056,6 @@ function Home() {
             transition={{ delay: 0.5 }}
             viewport={{ once: true }}
           >
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-[#00A3D9] text-white py-3 px-8 rounded-lg shadow-md hover:bg-[#0085B0] transition-colors duration-300"
-              style={{ fontFamily: "Agency FB" }}
-            >
-              READ MORE TESTIMONIALS
-            </motion.button>
           </motion.div>
         </div>
       </div>
@@ -1332,8 +1283,8 @@ function Home() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="#contact"
+              <Link 
+                to="/contact"
                 className="relative overflow-hidden bg-white text-blue-700 font-bold py-3 px-8 rounded-lg transition-all duration-300"
                 style={{
                   transform: isHovered ? "translateY(-2px)" : "translateY(0)",
@@ -1356,7 +1307,7 @@ function Home() {
                     transition: "transform 0.5s ease",
                   }}
                 ></div>
-              </a>
+              </Link>
               <Link
                 to="/projects"
                 className="relative overflow-hidden bg-transparent text-white border-2 border-white font-bold py-3 px-8 rounded-lg hover:bg-white/10 transition-all duration-300"

@@ -41,11 +41,11 @@ const About = () => {
     <div className="bg-white">
       {/* Hero Section */}
       <section className="relative h-96 bg-gradient-to-r from-[#00A3D9] to-[#00A3D9] overflow-hidden">
-        <div className="absolute inset-0 bg-black opacity-30"></div>
+        <div className="absolute inset-0 bg-[#00A3D9] opacity-30"></div>
         <div className="absolute inset-0 flex items-center justify-center px-4">
           <div className="text-center max-w-4xl">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">About Trusty Group</h1>
-            <p className="text-xl text-white">Established in 2017 with a mission to cultivate peace and prosperity through strategic investments.</p>
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 font-heading">About Trusty Group</h1>
+            <p className="text-xl text-white font-body">Established in 2017 with a mission to cultivate peace and prosperity through strategic investments.</p>
           </div>
         </div>
         <div className="absolute bottom-0 left-0 w-full h-16 bg-white transform -skew-y-2"></div>
@@ -68,13 +68,13 @@ const About = () => {
           }}
         >
           <motion.div className="bg-gray-50 p-8 rounded-lg shadow-md" variants={fadeIn}>
-            <h2 className="text-3xl font-bold mb-4 text-black">Our Mission</h2>
+            <h2 className="text-3xl font-bold mb-4 text-black font-heading animate-bounce">Our Mission</h2>
             <p className="text-gray-700 mb-4">To leverage our investment portfolio as a catalyst for cultivating peace and prosperity among communities worldwide. Optimize the use of talent, time, and treasure and establish a niche in the finance industry, and contribute to its scaling.</p>
             <div className="w-20 h-1 bg-[#00A3D9]"></div>
           </motion.div>
           
           <motion.div className="bg-gray-50 p-8 rounded-lg shadow-md" variants={fadeIn}>
-            <h2 className="text-3xl font-bold mb-4 text-black">Our Vision</h2>
+            <h2 className="text-3xl font-bold mb-4 text-black font-heading animate-bounce">Our Vision</h2>
             <p className="text-gray-700 mb-4">To be the world's leading catalyst for transformative growth through investment, creating a future where vibrant communities thrive in harmony.</p>
             <div className="w-20 h-1 bg-[#00A3D9]"></div>
           </motion.div>
@@ -553,13 +553,13 @@ const About = () => {
       transition={{ duration: 0.5, delay: 0.3 }}
       viewport={{ once: true }}
     >
-      <motion.button 
+      {/* <motion.button 
         className="bg-gradient-to-r from-[#0090c1] to-[#00A3D9] hover:from-[#0080b0] hover:to-[#0090c5] text-white font-bold py-2.5 px-8 rounded-lg shadow-md hover:shadow-lg transition duration-300"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.98 }}
       >
         Join Our Team
-      </motion.button>
+      </motion.button> */}
     </motion.div>
   </div>
 </section>
@@ -622,13 +622,17 @@ const About = () => {
           <h2 className="text-xl font-bold mb-6">Join Us in Building a Better Future</h2>
           <p className="text mb-8 max-w-3xl mx-auto">Whether you're an investor, potential partner, or community member, we invite you to be part of our journey toward creating prosperity and peace.</p>
           <div className="flex flex-wrap justify-center gap-4">
-            <button className="bg-white text-[#00A3D9] hover:bg-gray-100 font-bold py-3 px-8 rounded-lg transition duration-300">
-              Contact Us
-            </button>
-            <button className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-[#00A3D9] font-bold py-3 px-8 rounded-lg transition duration-300">
-              Explore Opportunities
-            </button>
-          </div>
+  <a href="/contact">
+    <button className="bg-white text-[#00A3D9] hover:bg-gray-100 font-bold py-3 px-8 rounded-lg transition duration-300">
+      Contact Us
+    </button>
+  </a>
+  <a href="/careers">
+    <button className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-[#00A3D9] font-bold py-3 px-8 rounded-lg transition duration-300">
+      Explore Opportunities
+    </button>
+  </a>
+</div>
         </div>
       </section>
     </div>

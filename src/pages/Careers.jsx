@@ -137,13 +137,13 @@ const Careers = () => {
   const handleApplyEmail = (jobTitle) => {
     const subject = encodeURIComponent(`Application for ${jobTitle} Position`);
     const body = encodeURIComponent(`Dear Hiring Manager,\n\nI am writing to apply for the ${jobTitle} position at Trusty Group. Please find my CV attached.\n\nThank you for your consideration.\n\nSincerely,\n[Your Name]`);
-    window.location.href = `mailto:niganzealain@gmail.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:construction@trustygroup.com?subject=${subject}&body=${body}`;
   };
 
   return (
     <div className="bg-gray-50">
       {/* Hero Section - Improved with more modern gradient and better visual hierarchy */}
-      <div className="relative overflow-hidden bg-gradient-to-br from-blue-600 to-indigo-800 text-white py-16">
+      <div className="relative overflow-hidden bg-gradient-to-br from-blue-500 to-indigo-600 text-white py-16">
         {/* Wave Background - Enhanced animation properties */}
         <div className="absolute inset-0 z-0 opacity-30">
           <svg
@@ -242,7 +242,7 @@ const Careers = () => {
             >
               <motion.a 
                 href="#openings" 
-                className="bg-white text-indigo-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition shadow-lg flex items-center justify-center"
+                className="bg-white text-indigo-500 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition shadow-lg flex items-center justify-center"
                 whileHover={{ 
                   scale: 1.05, 
                   boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)" 
@@ -282,12 +282,12 @@ const Careers = () => {
               viewport={{ once: true }}
               className="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-xl shadow-sm"
             >
-              <h3 className="text-2xl font-semibold mb-4 text-indigo-600">Our Mission</h3>
+              <h3 className="text-2xl font-semibold mb-4 text-indigo-500">Our Mission</h3>
               <p className="text-gray-700 mb-8 text-lg leading-relaxed">
                 To leverage our investment portfolio as a catalyst for cultivating peace and prosperity among communities worldwide. 
                 Optimize the use of talent, time, and treasure and establish a niche in the finance industry, and contribute to its scaling.
               </p>
-              <h3 className="text-2xl font-semibold mb-4 text-indigo-600">Our Vision</h3>
+              <h3 className="text-2xl font-semibold mb-4 text-indigo-500">Our Vision</h3>
               <p className="text-gray-700 text-lg leading-relaxed">
                 To be the world's leading catalyst for transformative growth through investment, creating a future where vibrant communities thrive in harmony.
               </p>
@@ -298,7 +298,7 @@ const Careers = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-2xl font-semibold mb-6 text-indigo-600">Core Values</h3>
+              <h3 className="text-2xl font-semibold mb-6 text-indigo-500">Core Values</h3>
               <ul className="space-y-6">
                 {[
                   { title: "Timely Delivery", text: "We pledge ourselves to providing our clients and communities with the best possible value without sacrificing quality." },
@@ -316,7 +316,7 @@ const Careers = () => {
                     viewport={{ once: true }}
                     whileHover={{ y: -5 }}
                   >
-                    <span className="bg-indigo-600 text-white p-1 rounded-full mr-3 mt-1">
+                    <span className="bg-indigo-500 text-white p-1 rounded-full mr-3 mt-1">
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
@@ -336,7 +336,7 @@ const Careers = () => {
       {/* Why Join Us Section - Enhanced with more interactive elements */}
       <div className="py-20 bg-gray-50">
         <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-blue-500 font-heading">Why Join Trusty Group?</h2>
+          <h2 className="text-3xl font-bold mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-blue-500 font-heading">Why Join Trusty Group?</h2>
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {[
               {
@@ -376,10 +376,10 @@ const Careers = () => {
                 viewport={{ once: true }}
                 whileHover={{ y: -10 }}
               >
-                <div className="w-14 h-14 bg-indigo-600 text-white rounded-xl flex items-center justify-center mb-6">
+                <div className="w-14 h-14 bg-indigo-500 text-white rounded-xl flex items-center justify-center mb-6">
                   {benefit.icon}
                 </div>
-                <h3 className="text-xl font-semibold mb-4 text-indigo-600">{benefit.title}</h3>
+                <h3 className="text-xl font-semibold mb-4 text-indigo-500">{benefit.title}</h3>
                 <p className="text-gray-700 leading-relaxed">
                   {benefit.description}
                 </p>
@@ -421,7 +421,7 @@ const Careers = () => {
           {/* Job Listings - Improved card design and interactions */}
           {loading ? (
             <div className="text-center py-16">
-              <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-indigo-600 mx-auto"></div>
+              <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-indigo-500 mx-auto"></div>
               <p className="mt-6 text-gray-600 text-lg">Loading job opportunities...</p>
             </div>
           ) : filteredJobs.length > 0 ? (
@@ -437,14 +437,14 @@ const Careers = () => {
                 >
                   <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4 mb-6">
                     <div>
-                      <h3 className="text-2xl font-bold text-indigo-600 mb-1">{job.title}</h3>
+                      <h3 className="text-2xl font-bold text-indigo-500 mb-1">{job.title}</h3>
                       <p className="text-gray-600 flex items-center">
                         <span className="inline-block w-4 h-4 bg-indigo-100 rounded-full mr-2"></span>
                         {job.subsidiary}
                       </p>
                     </div>
                     <div className="md:text-right">
-                      <span className="inline-block bg-indigo-100 text-indigo-800 text-sm px-4 py-1 rounded-full font-medium">
+                      <span className="inline-block bg-indigo-100 text-indigo-500 text-sm px-4 py-1 rounded-full font-medium">
                         {job.type}
                       </span>
                       <p className="text-gray-600 text-sm mt-2 flex items-center md:justify-end">
@@ -478,7 +478,7 @@ const Careers = () => {
                       Posted: {new Date(job.postedDate).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
                     </p>
                     <motion.button 
-                      className="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg transition flex items-center"
+                      className="bg-[#00A3D9] hover:bg-indigo-500 text-white px-6 py-3 rounded-lg transition flex items-center"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.98 }}
                       onClick={() => handleApplyEmail(job.title)}
@@ -517,7 +517,7 @@ const Careers = () => {
                   {
                     number: 1,
                     title: "Application Submission",
-                    description: "Email your resume/CV to niganzealain@gmail.com with the subject line containing the position you're applying for. Include a brief cover letter explaining your qualifications and interest in our mission."
+                    description: "Email your resume/CV to construction@trustygroup.com with the subject line containing the position you're applying for. Include a brief cover letter explaining your qualifications and interest in our mission."
                   },
                   {
                     number: 2,
@@ -545,7 +545,7 @@ const Careers = () => {
                   >
                     {/* Step number bubble - Enhanced with animations */}
                     <motion.div 
-                      className="h-16 w-16 rounded-full bg-indigo-600 text-white flex items-center justify-center text-xl font-bold z-10 mb-4 md:mb-0 md:mr-8 shadow-md"
+                      className="h-16 w-16 rounded-full bg-[#00A3D9] text-white flex items-center justify-center text-xl font-bold z-10 mb-4 md:mb-0 md:mr-8 shadow-md"
                       whileHover={{ 
                         scale: 1.1,
                         backgroundColor: "#4338ca"
@@ -780,7 +780,7 @@ const Careers = () => {
                         <h4 className="font-medium text-gray-800 mb-1">Email</h4>
                         <p className="text-gray-600">
                           <a 
-                            href="mailto:niganzealain@gmail.com" 
+                            href="mailto:construction@trustygroup.com" 
                             className="hover:text-indigo-600 transition-colors"
                           >
                           carrertrustgroup@gmail.com

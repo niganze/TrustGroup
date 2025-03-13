@@ -188,7 +188,7 @@ function Blog() {
                       {featuredPosts[0]?.category === 'news' ? 'Latest News' : 
                        featuredPosts[0]?.category === 'insights' ? 'Insights & Articles' : 'Tips & Resources'}
                     </div>
-                    <h4 className="text-xl md:text-3xl font-bold text-gray-900 mb-4 leading-tight">
+                    <h4 className="text-xl md:text-3xl font-bold text-gray-900 mb-4 leading-tight font-heading">
                       {featuredPosts[0]?.title}
                     </h4>
                     <p className="text-gray-600 mb-8">
@@ -234,7 +234,7 @@ function Blog() {
                     </div>
                   </div>
                   <div className="p-8">
-                    <h4 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">{post.title}</h4>
+                    <h4 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2 font-heading">{post.title}</h4>
                     <p className="text-gray-600 mb-6 line-clamp-3">{post.excerpt}</p>
                     <div className="flex items-center justify-between">
                       <div className="flex items-center">
@@ -324,7 +324,7 @@ function Blog() {
                 </div>
               </div>
               <div className="p-6">
-                <h4 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2 hover:text-[#00A3D9] transition-colors">{post.title}</h4>
+                <h4 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2 hover:text-[#00A3D9] transition-colors font-heading">{post.title}</h4>
                 <p className="text-gray-600 mb-4 line-clamp-3">{post.excerpt}</p>
                 <div className="flex flex-wrap gap-2 mb-5">
                   {post.tags.map(tag => (

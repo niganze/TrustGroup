@@ -102,8 +102,8 @@ const Navbar = () => {
                   onMouseLeave={() => setShowSubsidiaries(false)}
                 >
                   {[
-                    { url: "https://construction.trustygroup.co", label: "Trusty Construction" },
-                    { url: "https://estates.trustygroup.co", label: "Trusty Estates" }
+                    { url: "/", label: "Trusty Construction" },
+                    { url: "/", label: "Trusty Estates" }
                   ].map((item, index) => (
                     <Link
                       key={index}

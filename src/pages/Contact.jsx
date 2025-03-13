@@ -167,7 +167,7 @@ const Contact = () => {
   return (
     <div className="bg-white">
       {/* Hero Section with Gradient Mesh Background */}
-      <div className="relative bg-gradient-to-br from-blue-800 via-blue-700 to-indigo-800 text-white py-24 overflow-hidden">
+      <div className="relative bg-gradient-to-br from-[#00A3D9] via-blue-300 to-indigo-500 text-white py-24 overflow-hidden">
         {/* Animated Mesh Background */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -right-32 -top-32 w-96 h-96 bg-blue-500 opacity-20 rounded-full blur-3xl"></div>
@@ -308,14 +308,14 @@ const Contact = () => {
               <div className="inline-flex p-1 bg-white rounded-lg shadow-md">
                 <button 
                   onClick={scrollToForm}
-                  className={`py-3 px-8 rounded-lg font-medium transition-all duration-300 flex items-center ${activeTab === 'message' ? 'bg-blue-600 text-white shadow-md' : 'text-gray-700 hover:bg-blue-50'}`}
+                  className={`py-3 px-8 rounded-lg font-medium transition-all duration-300 flex items-center ${activeTab === 'message' ? 'bg-[#00A3D9] text-white shadow-md' : 'text-gray-700 hover:bg-blue-50'}`}
                 >
                   <Send className="h-4 w-4 mr-2" />
                   Send Message
                 </button>
                 <button 
                   onClick={scrollToMap}
-                  className={`py-3 px-8 rounded-lg font-medium transition-all duration-300 flex items-center ${activeTab === 'location' ? 'bg-blue-600 text-white shadow-md' : 'text-gray-700 hover:bg-blue-50'}`}
+                  className={`py-3 px-8 rounded-lg font-medium transition-all duration-300 flex items-center ${activeTab === 'location' ? 'bg-[#00A3D9] text-white shadow-md' : 'text-gray-700 hover:bg-blue-50'}`}
                 >
                   <MapPin className="h-4 w-4 mr-2" />
                   Our Locations
@@ -499,7 +499,7 @@ const Contact = () => {
                   <div>
                     <motion.button
                       type="submit"
-                      className="bg-blue-600 text-white py-3 px-8 rounded-lg hover:bg-blue-700 transition flex justify-center items-center w-full md:w-auto"
+                      className="bg-blue-400 text-white py-3 px-8 rounded-lg hover:bg-blue-700 transition flex justify-center items-center w-full md:w-auto"
                       disabled={formStatus.isSubmitting}
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
@@ -608,10 +608,12 @@ const Contact = () => {
                         <div>
                           <h3 className="text-xl font-bold mb-2 text-gray-800 font-heading">Regional Office</h3>
                           <address className="not-italic text-gray-600">
-                            123 Business Park<br />
-                            Nairobi, Kenya<br />
-                            <a href="tel:+254712345678" className="text-purple-600 hover:underline mt-2 block">+254 712 345 678</a>
-                            <a href="mailto:nairobi@trustygroup.com" className="text-purple-600 hover:underline">nairobi@trustygroup.com</a>
+                          KN 08 AVE Muhima Rd. 
+
+<br />
+SHEMA HOUSE, Second Floor<br />
+                            <a href="tel:+254712345678" className="text-purple-600 hover:underline mt-2 block">+250 782 009 576</a>
+                            <a href="mailto:nairobi@trustygroup.com" className="text-purple-600 hover:underline">construction@trustygroup.co</a>
                           </address>
                           <div className="mt-4">
                             <span className="inline-block bg-purple-100 text-purple-800 text-xs px-3 py-1 rounded-full mr-2">Regional Office</span>
@@ -753,7 +755,7 @@ const Contact = () => {
               >
                 {/* Abstract shapes in background */}
                 <div className="absolute top-0 right-0 w-64 h-64 bg-white opacity-10 rounded-full -mt-10 -mr-10"></div>
-                <div className="absolute bottom-0 left-0 w-48 h-48 bg-indigo-900 opacity-20 rounded-full -mb-10 -ml-10"></div>
+                <div className="absolute bottom-0 left-0 w-48 h-48 bg-indigo-500 opacity-20 rounded-full -mb-10 -ml-10"></div>
                 
                 <div className="relative z-10">
                   <h3 className="text-2xl font-bold mb-4 font-heading">Stay Updated with Trusty Group</h3>
@@ -767,7 +769,7 @@ const Contact = () => {
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       placeholder="Your email address"
-                      className="flex-grow p-3 rounded-lg text-gray-800 focus:ring-2 focus:ring-blue-300 outline-none"
+                      className="flex-grow p-3 rounded-lg text-gray-800 focus:ring-2 focus:ring-blue-500 outline-none"
                     />
                     <motion.button
                       onClick={handleNewsletterSubmit}
