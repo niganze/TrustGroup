@@ -1181,19 +1181,19 @@ function Home() {
               variants={fadeIn}
             >
               <div className="h-96 mb-6 rounded-lg overflow-hidden">
-                <div className="w-full h-full">
-                  <iframe
-                    width="100%"
-                    height="100%"
-                    frameBorder="0"
-                    scrolling="no"
-                    marginHeight="0"
-                    marginWidth="0"
-                    src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=KN%2027%20Street%205,%20Kigali,%20RW+(Trusty%20Group%20Ltd)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-                    title="Trusty Group Office Location"
-                    className="w-full h-full"
-                  ></iframe>
-                </div>
+              <div className="w-full h-full">
+    <iframe
+      width="100%"
+      height="100%"
+      frameBorder="0"
+      scrolling="no"
+      marginHeight="0"
+      marginWidth="0"
+      src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=KN%201%20Rd,%20Kigali,%20Rwanda+(Trust%20Group)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+      title="Trusty Group Office Location"
+      className="w-full h-full"
+    ></iframe>
+  </div>
               </div>
             </motion.div>
           </div>
