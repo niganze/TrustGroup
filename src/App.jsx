@@ -8,6 +8,7 @@ import Projects from './pages/Projects';
 import Blogs from './pages/Blogs';
 import Contact from './pages/Contact';
 import Careers from './pages/Careers';
+import SingleProject from './pages/SingleProject';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/singleproject" element={<SingleProject />} />
           <Route path="/blog" element={<Blogs />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/careers" element={<Careers />} />

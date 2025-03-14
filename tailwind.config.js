@@ -6,8 +6,8 @@ export const content = [
 export const theme = {
   extend: {
     fontFamily: {
-      'heading': ['"Agency FB"', 'sans-serif'],
-      'body': ['Monda', 'sans-serif'],
+      'heading': ['"Agency FB"'],
+      'body': ['Monda']
     },
     keyframes: {
       blob: {

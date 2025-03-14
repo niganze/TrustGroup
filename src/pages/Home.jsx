@@ -39,7 +39,7 @@ function Home() {
   // Sample project data (to be replaced with actual data)
   const subsidiaries = [
     {
-      id: "trust-construction",
+      id: "trusty-construction",
       name: "Trust Construction",
       projects: [
         {
@@ -60,7 +60,7 @@ function Home() {
       ],
     },
     {
-      id: "trust-estate",
+      id: "trusty-estate",
       name: "Trust Estate",
       projects: [
         {
@@ -129,7 +129,7 @@ function Home() {
   };
 
   return (
-    <div className="overflow-hidden">
+    <div className="overflow-hidden ">
       {/* Hero Section */}
       <motion.section
         initial={{ opacity: 0 }}
@@ -210,7 +210,7 @@ function Home() {
       </motion.section>
 
       {/* About Us Section */}
-      <section id="about" className="pt-0 overflow-hidden">
+      <section id="about" className="pt-0 overflow-hidden bg-slate-100">
         {/* Mission & Vision Section */}
         <div className="container mx-auto px-4 py-16">
           <div className="grid md:grid-cols-2 gap-12">
@@ -439,7 +439,7 @@ function Home() {
         </motion.div>
 
         {/* Ongoing Projects */}
-        <div className="container mx-auto px-4 py-12">
+        <div className="container mx-auto px-4 py-12 bg-slate-100">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -596,7 +596,7 @@ function Home() {
       {/* Services Section */}
       <section
         id="services"
-        className="py-20 bg-gray-50 mx-8 md:mx-16 lg:mx-24"
+        className="py-20 bg-gray-100 mx-8 md:mx-16 lg:mx-24"
       >
         <div className="container mx-auto px-4">
           <motion.div
@@ -812,7 +812,7 @@ function Home() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-20 bg-white mx-8 md:mx-16 lg:mx-24">
+      <section id="projects" className="py-20 bg-gray-20 mx-8 md:mx-16 lg:mx-24">
         <div className="container mx-auto px-4">
           <motion.div
             initial="hidden"
@@ -942,7 +942,7 @@ function Home() {
           >
             <Link
               to={`/projects?subsidiary=${activeSubsidiary}`}
-              className="bg-[#00A3D9] hover:bg-[#0082AE] text-white font-bold py-3 px-8 rounded-md transition-all duration-300 inline-block"
+              className="text-xl bg-[#00A3D9] hover:bg-[#0082AE] text-white font-bold py-3 px-8 rounded-md transition-all duration-300 inline-block font-heading"
             >
               View All {currentSubsidiary?.name} Projects
             </Link>
@@ -1077,8 +1077,8 @@ function Home() {
             <h2 className="text-4xl font-bold mb-4 text-black font-heading">CONTACT US</h2>
             <div className="w-20 h-1 bg-[#00A3D9] mx-auto mb-6"></div>
             <p
-              className="text-gray-600 max-w-2xl mx-auto font-body"
-        
+              className= "  text-gray-600 max-w-2xl mx-auto"
+              style={{ fontFamily: "Monda" }}
             >
               Get in touch with our team to discuss your next project
             </p>

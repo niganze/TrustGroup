@@ -143,7 +143,7 @@ const Careers = () => {
   return (
     <div className="bg-gray-50">
       {/* Hero Section - Improved with more modern gradient and better visual hierarchy */}
-      <div className="relative overflow-hidden bg-gradient-to-br from-blue-500 to-indigo-600 text-white py-16">
+      <div className="relative overflow-hidden bg-gradient-to-br from-blue-500 to-[#00A3D9] text-white py-16">
         {/* Wave Background - Enhanced animation properties */}
         <div className="absolute inset-0 z-0 opacity-30">
           <svg
@@ -242,7 +242,7 @@ const Careers = () => {
             >
               <motion.a 
                 href="#openings" 
-                className="bg-white text-indigo-500 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition shadow-lg flex items-center justify-center"
+                className="bg-white text-[#00A3D9] px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition shadow-lg flex items-center justify-center"
                 whileHover={{ 
                   scale: 1.05, 
                   boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)" 
@@ -273,7 +273,7 @@ const Careers = () => {
       {/* Our Mission and Values Section - Improved layout and visual hierarchy */}
       <div id="mission" className="py-20 bg-white">
         <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-blue-500 font-heading">Our Mission & Values</h2>
+          <h2 className="text-3xl font-bold mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-[#00A3D9] to-blue-500 font-heading">Our Mission & Values</h2>
           <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -282,12 +282,12 @@ const Careers = () => {
               viewport={{ once: true }}
               className="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-xl shadow-sm"
             >
-              <h3 className="text-2xl font-semibold mb-4 text-indigo-500">Our Mission</h3>
+              <h3 className="text-2xl font-semibold mb-4 text-[#00A3D9]">Our Mission</h3>
               <p className="text-gray-700 mb-8 text-lg leading-relaxed">
                 To leverage our investment portfolio as a catalyst for cultivating peace and prosperity among communities worldwide. 
                 Optimize the use of talent, time, and treasure and establish a niche in the finance industry, and contribute to its scaling.
               </p>
-              <h3 className="text-2xl font-semibold mb-4 text-indigo-500">Our Vision</h3>
+              <h3 className="text-2xl font-semibold mb-4 text-[#00A3D9]">Our Vision</h3>
               <p className="text-gray-700 text-lg leading-relaxed">
                 To be the world's leading catalyst for transformative growth through investment, creating a future where vibrant communities thrive in harmony.
               </p>
@@ -298,7 +298,7 @@ const Careers = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-2xl font-semibold mb-6 text-indigo-500">Core Values</h3>
+              <h3 className="text-2xl font-semibold mb-6 text-[#00A3D9]">Core Values</h3>
               <ul className="space-y-6">
                 {[
                   { title: "Timely Delivery", text: "We pledge ourselves to providing our clients and communities with the best possible value without sacrificing quality." },
@@ -316,7 +316,7 @@ const Careers = () => {
                     viewport={{ once: true }}
                     whileHover={{ y: -5 }}
                   >
-                    <span className="bg-indigo-500 text-white p-1 rounded-full mr-3 mt-1">
+                    <span className="bg-[#00A3D9] text-white p-1 rounded-full mr-3 mt-1">
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
@@ -336,7 +336,7 @@ const Careers = () => {
       {/* Why Join Us Section - Enhanced with more interactive elements */}
       <div className="py-20 bg-gray-50">
         <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-blue-500 font-heading">Why Join Trusty Group?</h2>
+          <h2 className="text-3xl font-bold mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-[#00A3D9] to-blue-500 font-heading">Why Join Trusty Group?</h2>
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {[
               {
@@ -376,10 +376,10 @@ const Careers = () => {
                 viewport={{ once: true }}
                 whileHover={{ y: -10 }}
               >
-                <div className="w-14 h-14 bg-indigo-500 text-white rounded-xl flex items-center justify-center mb-6">
+                <div className="w-14 h-14 bg-[#00A3D9] text-white rounded-xl flex items-center justify-center mb-6">
                   {benefit.icon}
                 </div>
-                <h3 className="text-xl font-semibold mb-4 text-indigo-500">{benefit.title}</h3>
+                <h3 className="text-xl font-semibold mb-4 text-[#00A3D9]">{benefit.title}</h3>
                 <p className="text-gray-700 leading-relaxed">
                   {benefit.description}
                 </p>
@@ -392,7 +392,7 @@ const Careers = () => {
       {/* Open Positions Section - Enhanced with better job card design */}
       <div id="openings" className="py-20 bg-white">
         <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-blue-500 font-heading">Open Positions</h2>
+          <h2 className="text-3xl font-bold mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-[#00A3D9] to-blue-500 font-heading">Open Positions</h2>
           
           {/* Filter - Enhanced with better design */}
           <div className="mb-12 max-w-md mx-auto">
@@ -402,7 +402,7 @@ const Careers = () => {
             <div className="relative">
               <select
                 id="subsidiary-filter"
-                className="w-full p-3 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 appearance-none bg-white shadow-sm hover:border-indigo-300 transition-all"
+                className="w-full p-3 border border-gray-300 rounded-lg focus:ring-[#00A3D9] focus:border-[#00A3D9] appearance-none bg-white shadow-sm hover:border-indigo-300 transition-all"
                 value={selectedSubsidiary}
                 onChange={(e) => setSelectedSubsidiary(e.target.value)}
               >
@@ -421,7 +421,7 @@ const Careers = () => {
           {/* Job Listings - Improved card design and interactions */}
           {loading ? (
             <div className="text-center py-16">
-              <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-indigo-500 mx-auto"></div>
+              <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-[#00A3D9] mx-auto"></div>
               <p className="mt-6 text-gray-600 text-lg">Loading job opportunities...</p>
             </div>
           ) : filteredJobs.length > 0 ? (
@@ -437,14 +437,14 @@ const Careers = () => {
                 >
                   <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4 mb-6">
                     <div>
-                      <h3 className="text-2xl font-bold text-indigo-500 mb-1">{job.title}</h3>
+                      <h3 className="text-2xl font-bold text-[#00A3D9] mb-1">{job.title}</h3>
                       <p className="text-gray-600 flex items-center">
                         <span className="inline-block w-4 h-4 bg-indigo-100 rounded-full mr-2"></span>
                         {job.subsidiary}
                       </p>
                     </div>
                     <div className="md:text-right">
-                      <span className="inline-block bg-indigo-100 text-indigo-500 text-sm px-4 py-1 rounded-full font-medium">
+                      <span className="inline-block bg-indigo-100 text-[#00A3D9] text-sm px-4 py-1 rounded-full font-medium">
                         {job.type}
                       </span>
                       <p className="text-gray-600 text-sm mt-2 flex items-center md:justify-end">
@@ -462,7 +462,7 @@ const Careers = () => {
                     <ul className="space-y-2">
                       {job.qualifications.map((qualification, index) => (
                         <li key={index} className="text-gray-700 flex items-start">
-                          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-indigo-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-[#00A3D9] flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                           </svg>
                           {qualification}
@@ -478,7 +478,7 @@ const Careers = () => {
                       Posted: {new Date(job.postedDate).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
                     </p>
                     <motion.button 
-                      className="bg-[#00A3D9] hover:bg-indigo-500 text-white px-6 py-3 rounded-lg transition flex items-center"
+                      className="bg-[#00A3D9] hover:bg-[#00A3D9] text-white px-6 py-3 rounded-lg transition flex items-center"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.98 }}
                       onClick={() => handleApplyEmail(job.title)}
@@ -505,7 +505,7 @@ const Careers = () => {
       {/* Application Process - Modernized with better visuals */}
       <div className="py-20 bg-gray-50">
         <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-blue-500 font-heading">Our Application Process</h2>
+          <h2 className="text-3xl font-bold mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-[#00A3D9] to-blue-500 font-heading">Our Application Process</h2>
           <div className="max-w-4xl mx-auto">
             <div className="relative">
               {/* Timeline line */}
@@ -555,7 +555,7 @@ const Careers = () => {
                     </motion.div>
                     
                     <div className="bg-white p-6 rounded-xl shadow-sm w-full hover:shadow-md transition-all">
-                      <h3 className="text-xl font-semibold mb-3 text-indigo-600 group-hover:text-indigo-700 transition-colors">
+                      <h3 className="text-xl font-semibold mb-3 text-[#00A3D9] group-hover:text-[#00A3D9] transition-colors">
                         {step.title}
                       </h3>
                       <p className="text-gray-700 leading-relaxed">
@@ -573,7 +573,7 @@ const Careers = () => {
      
 
       {/* Improved Call-to-Action - Enhanced with better visuals and animation */}
-      <div className="py-20 bg-gradient-to-br from-indigo-600 to-blue-700 text-white relative overflow-hidden">
+      <div className="py-20 bg-gradient-to-br from-[#00A3D9] to-[#00A3D9] text-white relative overflow-hidden">
         {/* Background elements */}
         <div className="absolute inset-0 overflow-hidden opacity-20">
           <svg
@@ -645,7 +645,7 @@ const Careers = () => {
             >
               <motion.a 
                 href="#openings" 
-                className="bg-white text-indigo-700 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition shadow-lg flex items-center justify-center"
+                className="bg-white text-[#00A3D9] px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition shadow-lg flex items-center justify-center"
                 whileHover={{ 
                   scale: 1.05, 
                   boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)" 
@@ -660,7 +660,7 @@ const Careers = () => {
               
               <motion.a 
                 href="mailto:carrertrustgroup@gmail.com" 
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-700 transition flex items-center justify-center"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-[#00A3D9] transition flex items-center justify-center"
                 whileHover={{ 
                   scale: 1.05, 
                   backgroundColor: "rgba(255, 255, 255, 1)",
@@ -679,7 +679,7 @@ const Careers = () => {
       {/* New: Success Stories Section - Adding a testimonial section */}
       <div className="py-20 bg-white">
         <div className="container mx-auto px-6">
-          <h3 className="text-3xl font-bold mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-blue-500 font-heading">
+          <h3 className="text-3xl font-bold mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-[#00A3D9] to-blue-500 font-heading">
             Employee Success Stories
           </h3>
           
@@ -713,16 +713,16 @@ const Careers = () => {
                 viewport={{ once: true }}
                 whileHover={{ y: -5 }}
               >
-                <div className="absolute top-0 right-0 bg-indigo-600 w-16 h-16 rounded-bl-xl rounded-tr-xl flex items-center justify-center">
+                <div className="absolute top-0 right-0 bg-[#00A3D9] w-16 h-16 rounded-bl-xl rounded-tr-xl flex items-center justify-center">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
                   </svg>
                 </div>
                 <div className="mb-6 flex items-center">
-                  <img src={testimonial.image} alt={testimonial.name} className="w-14 h-14 rounded-full object-cover mr-4 border-2 border-indigo-600" />
+                  <img src={testimonial.image} alt={testimonial.name} className="w-14 h-14 rounded-full object-cover mr-4 border-2 border-[#00A3D9]" />
                   <div>
                     <h3 className="font-semibold text-gray-800">{testimonial.name}</h3>
-                    <p className="text-indigo-600 text-sm">{testimonial.role}</p>
+                    <p className="text-[#00A3D9] text-sm">{testimonial.role}</p>
                   </div>
                 </div>
                 <blockquote className="text-gray-700 italic leading-relaxed">
@@ -738,14 +738,14 @@ const Careers = () => {
       <div className="py-20 bg-gray-50">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-blue-500 font-heading">
+            <h2 className="text-3xl font-bold mb-12 text-center text-[#00A3D9] font-heading">
               Contact Our Recruitment Team
             </h2>
             
             <div className="bg-white rounded-xl shadow-md overflow-hidden">
               <div className="grid md:grid-cols-5">
                 {/* Map or Image Section */}
-                <div className="md:col-span-2 bg-indigo-600 p-8 text-white flex flex-col justify-center items-center text-center">
+                <div className="md:col-span-2 bg-[#00A3D9] p-8 text-white flex flex-col justify-center items-center text-center">
                   <div className="mb-6">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 mx-auto opacity-80" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -758,7 +758,7 @@ const Careers = () => {
                     Rwanda<br />
                     East Africa
                   </p>
-                  <div className="mt-6 pt-6 border-t border-indigo-500 w-full">
+                  <div className="mt-6 pt-6 border-t border-[#00A3D9] w-full">
                     <p className="opacity-80 text-sm">
                       Mon - Fri: 8:00 AM - 6:00 PM<br />
                       Sat: 9:00 AM - 1:00 PM<br />
@@ -769,19 +769,19 @@ const Careers = () => {
                 
                 {/* Contact Information */}
                 <div className="md:col-span-3 p-8">
-                  <h3 className="text-xl font-semibold mb-6 text-indigo-600">Get in Touch</h3>
+                  <h3 className="text-xl font-semibold mb-6 text-[#00A3D9]">Get in Touch</h3>
                   
                   <div className="space-y-6">
                     <div className="flex items-start">
                       <div className="w-10 h-10 rounded-lg bg-indigo-100 flex items-center justify-center mr-4 flex-shrink-0">
-                        <Mail className="h-5 w-5 text-indigo-600" />
+                        <Mail className="h-5 w-5 text-[#00A3D9]" />
                       </div>
                       <div>
                         <h4 className="font-medium text-gray-800 mb-1">Email</h4>
                         <p className="text-gray-600">
                           <a 
                             href="mailto:construction@trustygroup.com" 
-                            className="hover:text-indigo-600 transition-colors"
+                            className="hover:text-[#00A3D9] transition-colors"
                           >
                           carrertrustgroup@gmail.com
                           </a>
@@ -792,14 +792,14 @@ const Careers = () => {
                     
                     <div className="flex items-start">
                       <div className="w-10 h-10 rounded-lg bg-indigo-100 flex items-center justify-center mr-4 flex-shrink-0">
-                        <Phone className="h-5 w-5 text-indigo-600" />
+                        <Phone className="h-5 w-5 text-[#00A3D9]" />
                       </div>
                       <div>
                         <h4 className="font-medium text-gray-800 mb-1">Phone</h4>
                         <p className="text-gray-600">
                           <a 
                             href="tel:+250780000000" 
-                            className="hover:text-indigo-600 transition-colors"
+                            className="hover:text-[#00A3D9] transition-colors"
                           >
                             +250 780 000 000
                           </a>
@@ -810,7 +810,7 @@ const Careers = () => {
                     
                     <div className="flex items-start">
                       <div className="w-10 h-10 rounded-lg bg-indigo-100 flex items-center justify-center mr-4 flex-shrink-0">
-                        <ExternalLink className="h-5 w-5 text-indigo-600" />
+                        <ExternalLink className="h-5 w-5 text-[#00A3D9]" />
                       </div>
                       <div>
                         <h4 className="font-medium text-gray-800 mb-1">Website</h4>
@@ -819,7 +819,7 @@ const Careers = () => {
                             href="https://trustygroup.com" 
                             target="_blank" 
                             rel="noopener noreferrer"
-                            className="hover:text-indigo-600 transition-colors"
+                            className="hover:text-[#00A3D9] transition-colors"
                           >
                             www.trustygroup.com
                           </a>
@@ -836,7 +836,7 @@ const Careers = () => {
         <a 
           key={index}
           href="#" 
-          className="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center hover:bg-indigo-600 hover:text-white transition-colors text-indigo-600"
+          className="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center hover:bg-[#00A3D9] hover:text-white transition-colors text-[#00A3D9]"
         >
           <svg 
             className="h-5 w-5" 

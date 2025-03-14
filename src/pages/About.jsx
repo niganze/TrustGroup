@@ -86,19 +86,19 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap border-b border-gray-200 mb-8">
             <button 
-              className={`mr-4 py-2 px-4 font-medium text-lg focus:outline-none ${activeTab === 'history' ? 'text-[#00A3D9] border-b-2 border-[#00A3D9]' : 'text-gray-500 hover:text-[#00A3D9]'}`}
+              className={`mr-4 py-2 px-4 font-heading text-2xl font-bold focus:outline-none ${activeTab === 'history' ? 'text-[#00A3D9] border-b-2 border-[#00A3D9]' : 'text-gray-500 hover:text-[#00A3D9]'}`}
               onClick={() => setActiveTab('history')}
             >
               Our History
             </button>
             <button 
-              className={`mr-4 py-2 px-4 font-medium text-lg focus:outline-none ${activeTab === 'values' ? 'text-[#00A3D9] border-b-2 border-[#00A3D9]' : 'text-gray-500 hover:text-[#00A3D9]'}`}
+              className={`mr-4 py-2 px-4 font-heading text-2xl font-bold  focus:outline-none ${activeTab === 'values' ? 'text-[#00A3D9] border-b-2 border-[#00A3D9]' : 'text-gray-500 hover:text-[#00A3D9]'}`}
               onClick={() => setActiveTab('values')}
             >
               Core Values
             </button>
             <button 
-              className={`mr-4 py-2 px-4 font-medium text-lg focus:outline-none ${activeTab === 'subsidiaries' ? 'text-[#00A3D9] border-b-2 border-[#00A3D9]' : 'text-gray-500 hover:text-[#00A3D9]'}`}
+              className={`mr-4 py-2 px-4 font-heading text-2xl font-bold  focus:outline-none ${activeTab === 'subsidiaries' ? 'text-[#00A3D9] border-b-2 border-[#00A3D9]' : 'text-gray-500 hover:text-[#00A3D9]'}`}
               onClick={() => setActiveTab('subsidiaries')}
             >
               Our Subsidiaries
@@ -114,41 +114,41 @@ const About = () => {
                 className="grid grid-cols-1 lg:grid-cols-2 gap-8"
               >
                 <div>
-                  <h3 className="text-2xl font-bold mb-6 text-black">Founding Story</h3>
-                  <p className="text-gray-700 mb-4">
+                  <h3 className="text-2xl font-bold mb-6 text-black font-heading">Founding Story</h3>
+                  <p className="text-gray-700 mb-4 font-body">
                     As narrated by Jimmy Frederic Byiringiro, CEO:
                   </p>
-                  <p className="text-gray-700 mb-4">
+                  <p className="text-gray-700 mb-4 font-body">
                     Initially branded as TrustyCo Ltd, Trusty Group was conceived in 2017 as a company solely devoted to construction services. In 2019, inspired by the idea of bringing my family together, I envisioned an even greater goal—a need to build a business environment that includes diverse fields of work-life without requiring anyone to abandon their primary careers.
                   </p>
-                  <p className="text-gray-700 mb-4">
+                  <p className="text-gray-700 mb-4 font-body">
                     This vision meant creating a business that includes distinct areas of expertise: engineering, entertainment, agriculture, health, finance, technology, and more—areas to which the members of my family have dedicated their work lives.
                   </p>
-                  <p className="text-gray-700">
+                  <p className="text-gray-700 font-body">
                     But my family was just the beginning—the desire to unite the broader communities I belong to remained strong, and I knew I had to bring this dream to life. This vision led to the transformation from TrustyCo Ltd—a company focused purely on construction—to Trusty Group Ltd—a group of companies that embraces various careers and industries.
                   </p>
                 </div>
                 <div className="flex flex-col justify-between">
                   <div className="bg-white p-6 rounded-lg shadow-md mb-6">
-                    <h3 className="text-2xl font-bold mb-4 text-black">Why the name "Trusty"?</h3>
-                    <p className="text-gray-700">
+                    <h3 className="text-2xl font-bold mb-4 text-black font-heading">Why the name "Trusty"?</h3>
+                    <p className="text-gray-700 font-body">
                       I believe that trust is undoubtedly among the most important aspects of cooperation and partnerships. Given that my personal drive is seeing communities cohabiting peacefully, and our vision as Trusty is "creating a future where communities thrive in harmony," all our efforts would go in vain if trust went unchecked, thus goes with culmination of experiences and perceptions related to the past, present, and future. This devotion to reliability and integrity is what makes us "Trusty."
                     </p>
                   </div>
                   <div className="bg-[#00A3D9] text-white p-6 rounded-lg shadow-md">
-                    <h3 className="text-2xl font-bold mb-4">Our Growth Timeline</h3>
+                    <h3 className="text-2xl font-bold mb-4 font-heading">Our Growth Timeline</h3>
                     <ul className="space-y-3">
                       <li className="flex items-start">
-                        <span className="font-bold mr-2">2017:</span> Established as TrustyCo Ltd, focusing on construction services
+                        <span className="font-bold mr-2 font-body">2017:</span> Established as TrustyCo Ltd, focusing on construction services
                       </li>
                       <li className="flex items-start">
-                        <span className="font-bold mr-2">2019:</span> Vision expanded to create a more diverse business environment
+                        <span className="font-bold mr-2 font-body">2019:</span> Vision expanded to create a more diverse business environment
                       </li>
                       <li className="flex items-start">
-                        <span className="font-bold mr-2">2020:</span> Rebranded as Trusty Group Ltd with multiple subsidiary divisions
+                        <span className="font-bold mr-2 font-body">2020:</span> Rebranded as Trusty Group Ltd with multiple subsidiary divisions
                       </li>
                       <li className="flex items-start">
-                        <span className="font-bold mr-2">2023:</span> Expanded operations and diversified investment portfolio
+                        <span className="font-bold mr-2 font-body">2023:</span> Expanded operations and diversified investment portfolio
                       </li>
                     </ul>
                   </div>
@@ -162,7 +162,7 @@ const About = () => {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5 }}
               >
-                <h3 className="text-2xl font-bold mb-6 text-black">Core Values</h3>
+                <h3 className="text-2xl font-bold mb-6 text-black font-heading">Core Values</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
                     <div className="w-12 h-12 bg-[#00A3D9] rounded-full flex items-center justify-center mb-4">
@@ -223,12 +223,12 @@ const About = () => {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5 }}
               >
-                <h3 className="text-2xl font-bold mb-6 text-black">Our Subsidiaries</h3>
+                <h3 className="text-2xl font-bold mb-6 text-black font-heading">Our Subsidiaries</h3>
                 <div className="space-y-8">
                   <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
                     <div className="flex flex-col md:flex-row">
                       <div className="md:w-2/3 pr-0 md:pr-6">
-                        <h4 className="text-xl font-bold mb-2 text-black">Trusty Estates</h4>
+                        <h4 className="text-xl font-bold mb-2 text-black font-heading">Trusty Estates</h4>
                         <p className="text-gray-700 mb-4">Focused on real estate development and investment opportunities that maximize the use of talent, time, and treasure while giving everyone an opportunity for investment.</p>
                         <ul className="list-disc list-inside text-gray-700 space-y-1">
                           <li>Real Estate Study Proposal</li>
@@ -342,11 +342,11 @@ const About = () => {
       {/* Goals Section */}
       <section className="py-16 bg-gradient-to-r from-[#00A3D9] to-blue-700 text-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl font-bold mb-12 text-center">Our Goals</h2>
+          <h2 className="text-3xl font-bold mb-12 text-center font-heading">Our Goals</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div>
-              <h3 className="text-2xl font-bold mb-6 flex items-center">
+              <h3 className="text-2xl font-bold mb-6 flex items-center font-heading">
                 <span className="bg-white text-[#00A3D9] w-10 h-10 rounded-full flex items-center justify-center mr-3">5</span>
                 5-Year Goals
               </h3>
@@ -385,7 +385,7 @@ const About = () => {
             </div>
             
             <div>
-              <h3 className="text-2xl font-bold mb-6 flex items-center">
+              <h3 className="text-2xl font-bold mb-6 flex items-center font-heading">
                 <span className="bg-white text-[#00A3D9] w-10 h-10 rounded-full flex items-center justify-center mr-3">10</span>
                 10-Year Goals
               </h3>
@@ -445,7 +445,7 @@ const About = () => {
       viewport={{ once: true }}
       className="text-center mb-12"
     >
-      <h2 className="text-3xl font-bold mb-3 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-400">Our Leadership</h2>
+      <h2 className="text-3xl font-bold mb-3 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-400 font-heading">Our Leadership</h2>
       <div className="w-16 h-1 bg-gradient-to-r from-[#007aaf] to-[#00A3D9] mx-auto mb-4 rounded-full"></div>
     </motion.div>
     
@@ -568,10 +568,10 @@ const About = () => {
       <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl font-bold mb-4 text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-200">
+          <h2 className="text-3xl font-bold mb-4 text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-200 font-heading">
             Frequently Asked Questions
           </h2>
-          <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 text-center mb-12 max-w-2xl mx-auto font-body">
             Find answers to common questions about Trusty Group and our operations
           </p>
           

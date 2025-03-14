@@ -52,7 +52,7 @@ const Navbar = () => {
                 className="h-10 transition-transform duration-300 group-hover:scale-110" 
               />
               <span className="ml-2 text-2xl font-bold font-['Agency_FB'] transition-all duration-300 group-hover:tracking-wider">
-                <span className="text-[#00A3D9]">TRUST</span>{" "}
+                <span className="text-[#00A3D9]">TRUSTY</span>{" "}
                 <span className="text-black">GROUP</span>
               </span>
             </Link>
@@ -122,9 +122,9 @@ const Navbar = () => {
           <div className="hidden md:block">
             <Link
               to="/contact"
-              className="bg-[#00A3D9] text-white px-6 py-2 rounded-md font-['Monda'] hover:shadow-lg hover:bg-[#0095c7] transition-all duration-300 relative overflow-hidden group"
+              className="bg-[#00A3D9] text-white px-6 py-2 rounded-md font-['Monda']  transition-all duration-300 relative overflow-hidden group"
             >
-              <span className="relative z-10">Contact Us</span>
+              <span className="relative z-10 ">Contact Us</span>
               <span className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
             </Link>
           </div>

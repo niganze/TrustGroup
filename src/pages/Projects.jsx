@@ -6,6 +6,7 @@ import Rebero from '../assets/images/single.jpeg';
 import Building from '../assets/images/Building.jpeg';
 import Apartments from '../assets/images/Apartment.jpeg';
 import Villa from '../assets/images/Single.jpeg';
+import { Link } from 'react-router-dom';
 
 function Projects() {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -242,9 +243,12 @@ function Projects() {
                     ))}
                   </div>
                   
-                  <button className="bg-[#00A3D9] hover:bg-[#0087b3] text-white px-4 py-2 md:px-6 md:py-3 rounded-full text-sm md:text-base font-medium transition-all">
-                    View Details
-                  </button>
+                  <Link
+  to="/singleproject"
+  className="bg-[#00A3D9] hover:bg-[#0087b3] text-white px-4 py-2 md:px-6 md:py-3 rounded-full text-sm md:text-base font-medium transition-all"
+>
+  View Details
+</Link>
                 </motion.div>
               </div>
             </div>
@@ -363,9 +367,12 @@ function Projects() {
                           </div>
                           
                           <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-all duration-300">
-                            <button className="w-full bg-[#00A3D9] text-white py-2 rounded-md text-sm font-semibold hover:bg-opacity-90 transition-all">
-                              View Details
-                            </button>
+                          <Link
+      to="/singleproject"
+      className="block text-center w-full bg-[#00A3D9] text-white py-2 rounded-md text-sm font-semibold hover:bg-opacity-90 transition-all"
+    >
+      View Details
+    </Link>
                           </div>
                         </div>
                         <div className="p-4 md:p-5">
@@ -451,13 +458,17 @@ function Projects() {
     Whether you're looking to build, renovate, or invest, our team at Trusty Group is ready to bring your vision to life. Let's create something extraordinary together.
   </p>
   <div className="flex flex-col sm:flex-row gap-3 justify-center">
+  <a href="/contact" className="no-underline">
     <button className="bg-white text-[#00A3D9] px-6 py-3 rounded-full text-sm md:text-base font-medium hover:bg-gray-100 transition-all shadow-md">
       Schedule a Consultation
     </button>
+  </a>
+  <a href="/projects" className="no-underline">
     <button className="bg-transparent border-2 border-white text-white px-6 py-3 rounded-full text-sm md:text-base font-medium hover:bg-white hover:bg-opacity-10 transition-all">
       View More Projects
     </button>
-  </div>
+  </a>
+</div>
   
   {/* Decorative elements - contained within parent */}
   <div className="absolute top-0 right-0 w-16 h-16 md:w-24 md:h-24 bg-white bg-opacity-10 rounded-full translate-x-1/2 -translate-y-1/2"></div>

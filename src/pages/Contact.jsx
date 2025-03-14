@@ -167,7 +167,7 @@ const Contact = () => {
   return (
     <div className="bg-white">
       {/* Hero Section with Gradient Mesh Background */}
-      <div className="relative bg-gradient-to-br from-[#00A3D9] via-blue-300 to-indigo-500 text-white py-24 overflow-hidden">
+      <div className="relative bg-gradient-to-br from-[#00A3D9] via-blue-300 to-[#00A3D9] text-white py-24 overflow-hidden">
         {/* Animated Mesh Background */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -right-32 -top-32 w-96 h-96 bg-blue-500 opacity-20 rounded-full blur-3xl"></div>
@@ -266,11 +266,11 @@ const Contact = () => {
             transition={{ duration: 0.5, delay: 0.4 }}
           >
             <div className="rounded-full bg-indigo-50 w-16 h-16 flex items-center justify-center mb-4 ring-8 ring-indigo-50/50">
-              <Mail className="h-8 w-8 text-indigo-600" />
+              <Mail className="h-8 w-8 text-[#00A3D9]" />
             </div>
             <h3 className="text-xl font-bold mb-2 text-gray-800 font-heading">Email Us</h3>
             <p className="text-gray-600 mb-4">We'll respond as soon as possible</p>
-            <a href="mailto:info@trustygroup.com" className="text-indigo-600 font-medium group flex items-center">
+            <a href="mailto:info@trustygroup.com" className="text-[#00A3D9] font-medium group flex items-center">
               info@trustygroup.com
               <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
@@ -567,7 +567,7 @@ const Contact = () => {
                     >
                       {/* Abstract decorative element */}
                       <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500 opacity-10 rounded-full -mr-10 -mt-10"></div>
-                      <div className="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 opacity-10 rounded-full -ml-10 -mb-10"></div>
+                      <div className="absolute bottom-0 left-0 w-24 h-24 bg-[#00A3D9] opacity-10 rounded-full -ml-10 -mb-10"></div>
                       
                       <div className="flex items-start relative z-10">
                         <div className="bg-white rounded-full p-3 mr-4 shadow-md">
@@ -748,14 +748,14 @@ SHEMA HOUSE, Second Floor<br />
             {/* Newsletter Subscription */}
             <div className="w-full md:w-1/2">
               <motion.div 
-                className="bg-gradient-to-br from-blue-600 to-indigo-700 rounded-2xl shadow-xl p-8 text-white overflow-hidden relative"
+                className="bg-gradient-to-br from-[#00A3D9] to-[#00A3D9] rounded-2xl shadow-xl p-8 text-white overflow-hidden relative"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
               >
                 {/* Abstract shapes in background */}
                 <div className="absolute top-0 right-0 w-64 h-64 bg-white opacity-10 rounded-full -mt-10 -mr-10"></div>
-                <div className="absolute bottom-0 left-0 w-48 h-48 bg-indigo-500 opacity-20 rounded-full -mb-10 -ml-10"></div>
+                <div className="absolute bottom-0 left-0 w-48 h-48 bg-[#00A3D9] opacity-20 rounded-full -mb-10 -ml-10"></div>
                 
                 <div className="relative z-10">
                   <h3 className="text-2xl font-bold mb-4 font-heading">Stay Updated with Trusty Group</h3>
