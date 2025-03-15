@@ -1,10 +1,10 @@
 // Layout.jsx
 import { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Outlet } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
 
-const Layout = ({ children }) => {
+const Layout = () => {
   const location = useLocation();
 
   // Scroll to top on route change
@@ -27,7 +27,7 @@ const Layout = ({ children }) => {
       <Navbar />
       {/* Add padding-top to account for fixed navbar */}
       <main className="flex-grow pt-16">
-        {children}
+        <Outlet />
       </main>
       <Footer />
     </div>

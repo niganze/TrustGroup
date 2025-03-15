@@ -170,7 +170,7 @@ const About = () => {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
                     </div>
-                    <h4 className="text-xl font-bold mb-2 text-black">Timely Delivery</h4>
+                    <h4 className="text-xl font-bold  font-heading mb-2 text-black">Timely Delivery</h4>
                     <p className="text-gray-700">We pledge ourselves to providing our clients and communities with the best possible value without sacrificing quality by providing timely, high-quality solutions and services.</p>
                   </div>
                   
@@ -180,7 +180,7 @@ const About = () => {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                       </svg>
                     </div>
-                    <h4 className="text-xl font-bold mb-2 text-black">Innovative Mindset</h4>
+                    <h4 className="text-xl font-bold font-heading mb-2 text-black">Innovative Mindset</h4>
                     <p className="text-gray-700">We believe in the power of creativity and forward-thinking. Our system combines novel approaches with an adherence to pushing limits and discovering new opportunities in all industries.</p>
                   </div>
                   
@@ -190,7 +190,7 @@ const About = () => {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                       </svg>
                     </div>
-                    <h4 className="text-xl font-bold mb-2 text-black">Community-Centric Approach</h4>
+                    <h4 className="text-xl font-bold font-heading mb-2 text-black">Community-Centric Approach</h4>
                     <p className="text-gray-700">Our investments and projects are designed with the community at heart. We strive to create spaces and solutions that not only satisfy the demands of today but also improve the well-being of coming generations.</p>
                   </div>
                   
@@ -200,7 +200,7 @@ const About = () => {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h.5A2.5 2.5 0 0020 5.5v-1.5" />
                       </svg>
                     </div>
-                    <h4 className="text-xl font-bold mb-2 text-black">Sustainability Focus</h4>
+                    <h4 className="text-xl font-bold font-heading mb-2 text-black">Sustainability Focus</h4>
                     <p className="text-gray-700">Building communities that thrive together for centuries requires a vision that spans not just decades, but hundreds and even thousands of years. We are devoted to sustainable practices that ensure long-term growth and environmental stewardship.</p>
                   </div>
                   
@@ -210,7 +210,7 @@ const About = () => {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                       </svg>
                     </div>
-                    <h4 className="text-xl font-bold mb-2 text-black">Integrity and Trustworthiness</h4>
+                    <h4 className="text-xl font-bold mb-2 font-heading text-black">Integrity and Trustworthiness</h4>
                     <p className="text-gray-700">We uphold the highest standards of honesty, transparency, and accountability in all our plans and partnerships, and ensure that these values endure for centuries to come.</p>
                   </div>
                 </div>
@@ -255,7 +255,7 @@ const About = () => {
                   <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
                     <div className="flex flex-col md:flex-row">
                       <div className="md:w-2/3 pr-0 md:pr-6">
-                        <h4 className="text-xl font-bold mb-2 text-black">Trusty Construction</h4>
+                        <h4 className="text-xl font-bold font-heading mb-2 text-black">Trusty Construction</h4>
                         <p className="text-gray-700 mb-4">Specializing in innovative construction projects that combine efficiency, quality, and long-term sustainability.</p>
                         <ul className="list-disc list-inside text-gray-700 space-y-1">
                           <li>Architectural, Structural, and Interior Design</li>
@@ -283,7 +283,7 @@ const About = () => {
                   <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
                     <div className="flex flex-col md:flex-row">
                       <div className="md:w-2/3 pr-0 md:pr-6">
-                        <h4 className="text-xl font-bold mb-2 text-black">Trusty Pictures</h4>
+                        <h4 className="text-xl font-bold font-heading mb-2 text-black">Trusty Pictures</h4>
                         <p className="text-gray-700 mb-4">A creative hub for photography, film, and videography services, crafting stories that connect people and inspire communities.</p>
                         <ul className="list-disc list-inside text-gray-700 space-y-1">
                           <li>Event Photography & Videography</li>
@@ -309,7 +309,7 @@ const About = () => {
                   
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-                      <h4 className="text-xl font-bold mb-2 text-black">Trusty Technologies</h4>
+                      <h4 className="text-xl font-heading font-bold mb-2 text-black">Trusty Technologies</h4>
                       <p className="text-gray-700">A venture into technology, where we aim to explore Artificial Intelligence, cybersecurity, and software/web development in order to further tech-driven solutions in the future.</p>
                       <div className="mt-4 text-center">
                         <span className="text-gray-500 font-medium">Coming Soon</span>
@@ -317,7 +317,7 @@ const About = () => {
                     </div>
                     
                     <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-                      <h4 className="text-xl font-bold mb-2 text-black">Trusty Fashion</h4>
+                      <h4 className="text-xl font-heading font-bold mb-2 text-black">Trusty Fashion</h4>
                       <p className="text-gray-700">Creating cultural value through fashion, pioneering the advancement of Africa's textile industry. Our goal is to build a strong foundation in apparel and expand the brand globally as a lifestyle innovator.</p>
                       <div className="mt-4 text-center">
                         <span className="text-gray-500 font-medium">Coming Soon</span>
@@ -325,7 +325,7 @@ const About = () => {
                     </div>
                     
                     <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-                      <h4 className="text-xl font-bold mb-2 text-black">Trusty Trade & Commerce</h4>
+                      <h4 className="text-xl font-heading font-bold mb-2 text-black">Trusty Trade & Commerce</h4>
                       <p className="text-gray-700">Engaging in various trade activities including global chemical trading, steel trading, energy resource management, and industrial material sourcing.</p>
                       <div className="mt-4 text-center">
                         <span className="text-gray-500 font-medium">Coming Soon</span>

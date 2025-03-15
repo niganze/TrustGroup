@@ -282,13 +282,13 @@ const Careers = () => {
               viewport={{ once: true }}
               className="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-xl shadow-sm"
             >
-              <h3 className="text-2xl font-semibold mb-4 text-[#00A3D9]">Our Mission</h3>
-              <p className="text-gray-700 mb-8 text-lg leading-relaxed">
+              <h3 className="text-2xl font-heading mb-4 text-[#00A3D9]">Our Mission</h3>
+              <p className="text-gray-700 mb-8 leading-relaxed font-body">
                 To leverage our investment portfolio as a catalyst for cultivating peace and prosperity among communities worldwide. 
                 Optimize the use of talent, time, and treasure and establish a niche in the finance industry, and contribute to its scaling.
               </p>
-              <h3 className="text-2xl font-semibold mb-4 text-[#00A3D9]">Our Vision</h3>
-              <p className="text-gray-700 text-lg leading-relaxed">
+              <h3 className="text-2xl font-heading mb-4 text-[#00A3D9]">Our Vision</h3>
+              <p className="text-gray-700 text-lg leading-relaxed font-body">
                 To be the world's leading catalyst for transformative growth through investment, creating a future where vibrant communities thrive in harmony.
               </p>
             </motion.div>
@@ -298,7 +298,7 @@ const Careers = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-2xl font-semibold mb-6 text-[#00A3D9]">Core Values</h3>
+              <h3 className="text-2xl font-heading mb-6 text-[#00A3D9]">Core Values</h3>
               <ul className="space-y-6">
                 {[
                   { title: "Timely Delivery", text: "We pledge ourselves to providing our clients and communities with the best possible value without sacrificing quality." },
@@ -322,8 +322,8 @@ const Careers = () => {
                       </svg>
                     </span>
                     <div>
-                      <span className="font-semibold text-indigo-800">{value.title}:</span>{" "}
-                      <span className="text-gray-700">{value.text}</span>
+                      <span className="font-body text-indigo-800">{value.title}:</span>{" "}
+                      <span className="text-gray-700 font-body">{value.text}</span>
                     </div>
                   </motion.li>
                 ))}
@@ -379,8 +379,8 @@ const Careers = () => {
                 <div className="w-14 h-14 bg-[#00A3D9] text-white rounded-xl flex items-center justify-center mb-6">
                   {benefit.icon}
                 </div>
-                <h3 className="text-xl font-semibold mb-4 text-[#00A3D9]">{benefit.title}</h3>
-                <p className="text-gray-700 leading-relaxed">
+                <h3 className="text-xl font-semibold mb-4 text-[#00A3D9] font-heading">{benefit.title}</h3>
+                <p className="text-gray-700 leading-relaxed font-body">
                   {benefit.description}
                 </p>
               </motion.div>
@@ -437,7 +437,7 @@ const Careers = () => {
                 >
                   <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4 mb-6">
                     <div>
-                      <h3 className="text-2xl font-bold text-[#00A3D9] mb-1">{job.title}</h3>
+                      <h3 className="text-2xl font-bold text-[#00A3D9] mb-1 font-heading">{job.title}</h3>
                       <p className="text-gray-600 flex items-center">
                         <span className="inline-block w-4 h-4 bg-indigo-100 rounded-full mr-2"></span>
                         {job.subsidiary}
@@ -456,7 +456,7 @@ const Careers = () => {
                       </p>
                     </div>
                   </div>
-                  <p className="text-gray-700 mb-6 leading-relaxed">{job.description}</p>
+                  <p className="text-gray-700 mb-6 leading-relaxed font-body">{job.description}</p>
                   <div className="mb-8">
                     <h4 className="font-semibold mb-3 text-gray-800">Key Qualifications:</h4>
                     <ul className="space-y-2">
@@ -555,10 +555,10 @@ const Careers = () => {
                     </motion.div>
                     
                     <div className="bg-white p-6 rounded-xl shadow-sm w-full hover:shadow-md transition-all">
-                      <h3 className="text-xl font-semibold mb-3 text-[#00A3D9] group-hover:text-[#00A3D9] transition-colors">
+                      <h3 className="text-xl font-heading mb-3 text-[#00A3D9] group-hover:text-[#00A3D9] transition-colors">
                         {step.title}
                       </h3>
-                      <p className="text-gray-700 leading-relaxed">
+                      <p className="text-gray-700 leading-relaxed font-body">
                         {step.description}
                       </p>
                     </div>
@@ -752,14 +752,14 @@ const Careers = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                     </svg>
                   </div>
-                  <h3 className="text-xl font-semibold mb-2">Trusty Group Headquarters</h3>
-                  <p className="opacity-80 leading-relaxed">
+                  <h3 className="text-xl font-semibold mb-2 font-heading">Trusty Group Headquarters</h3>
+                  <p className="opacity-80 leading-relaxed font-body">
                     KN 2 St, Kigali<br />
                     Rwanda<br />
                     East Africa
                   </p>
                   <div className="mt-6 pt-6 border-t border-[#00A3D9] w-full">
-                    <p className="opacity-80 text-sm">
+                    <p className="opacity-80 text-sm font-body">
                       Mon - Fri: 8:00 AM - 6:00 PM<br />
                       Sat: 9:00 AM - 1:00 PM<br />
                       Sun: Closed
@@ -769,7 +769,7 @@ const Careers = () => {
                 
                 {/* Contact Information */}
                 <div className="md:col-span-3 p-8">
-                  <h3 className="text-xl font-semibold mb-6 text-[#00A3D9]">Get in Touch</h3>
+                  <h3 className="text-xl font-heading mb-6 text-[#00A3D9]">Get in Touch</h3>
                   
                   <div className="space-y-6">
                     <div className="flex items-start">
@@ -777,7 +777,7 @@ const Careers = () => {
                         <Mail className="h-5 w-5 text-[#00A3D9]" />
                       </div>
                       <div>
-                        <h4 className="font-medium text-gray-800 mb-1">Email</h4>
+                        <h4 className="font-semibold text-gray-800 mb-1 ">Email</h4>
                         <p className="text-gray-600">
                           <a 
                             href="mailto:construction@trustygroup.com" 
