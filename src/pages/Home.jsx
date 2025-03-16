@@ -157,7 +157,7 @@ function Home() {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <h1
-              className="text-5xl md:text-7xl font-bold text-white mb-6 animate-blob font-heading"
+              className="text-5xl md:text-7xl font-bold text-white mb-6  font-heading"
             >
               TRUSTY GROUP
             </h1>
@@ -165,7 +165,7 @@ function Home() {
               className="text-xl md:text-2xl text-white mb-8 font-body"
               
             >
-              Building Excellence Through Innovation and Integrity
+              Connected Homes, Thriving Communities
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
