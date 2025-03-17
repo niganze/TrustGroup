@@ -65,8 +65,8 @@ const Navbar = () => {
               { path: "/about", label: "About Us" },
               { path: "/services", label: "Services" },
               { path: "/projects", label: "Projects" },
-              { path: "/blog", label: "Blog" },
-              { path: "/careers", label: "Careers" }
+              { path: "/careers", label: "Careers" },
+              { path: "/blog", label: "Blog" }
             ].map((item) => (
               <Link
                 key={item.path}
@@ -83,7 +83,7 @@ const Navbar = () => {
             ))}
 
             {/* Subsidiaries Dropdown with enhanced animation */}
-            <div className="relative inline-block">
+            {/* <div className="relative inline-block">
               <button
                 onMouseEnter={() => setShowSubsidiaries(true)}
                 onMouseLeave={() => setShowSubsidiaries(false)}
@@ -115,7 +115,7 @@ const Navbar = () => {
                   ))}
                 </div>
               )}
-            </div>
+            </div> */}
           </div>
 
           {/* Contact Us Button with hover effect */}
@@ -192,7 +192,7 @@ const Navbar = () => {
             ))}
 
             {/* Mobile Subsidiaries Dropdown */}
-            <div className="py-1 px-2">
+            {/* <div className="py-1 px-2">
               <button
                 onClick={toggleSubsidiaries}
                 className={`flex justify-between items-center w-full text-left rounded-md py-2 transition duration-200 ${
@@ -223,7 +223,7 @@ const Navbar = () => {
                   </Link>
                 ))}
               </div>
-            </div>
+            </div> */}
 
             {/* Mobile Contact Us Button with pulsing effect */}
             <div className="pt-3 px-2">

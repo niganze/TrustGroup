@@ -70,49 +70,50 @@ const Footer = () => {
             <p className="mb-4 text-sm text-gray-300">
               Established in 2017 with a mission to use Real Estate Development as an art form to cultivate peace.
             </p>
-            <motion.div 
-              className="flex space-x-4"
-              initial="hidden"
-              animate="visible"
-              variants={staggerChildren}
-            >
-              <motion.a 
-                href="https://facebook.com/trustygroup" 
-                aria-label="Facebook" 
-                className="text-white hover:text-[#00A3D9] transition-colors duration-300"
-                variants={subsidiaryVariant}
-                whileHover={{ scale: 1.2 }}
-              >
-                <Facebook size={18} />
-              </motion.a>
-              <motion.a 
-                href="https://twitter.com/trustygroup" 
-                aria-label="Twitter" 
-                className="text-white hover:text-[#00A3D9] transition-colors duration-300"
-                variants={subsidiaryVariant}
-                whileHover={{ scale: 1.2 }}
-              >
-                <Twitter size={18} />
-              </motion.a>
-              <motion.a 
-                href="https://linkedin.com/company/trustygroup" 
-                aria-label="LinkedIn" 
-                className="text-white hover:text-[#00A3D9] transition-colors duration-300"
-                variants={subsidiaryVariant}
-                whileHover={{ scale: 1.2 }}
-              >
-                <Linkedin size={18} />
-              </motion.a>
-              <motion.a 
-                href="https://instagram.com/trustygroup" 
-                aria-label="Instagram" 
-                className="text-white hover:text-[#00A3D9] transition-colors duration-300"
-                variants={subsidiaryVariant}
-                whileHover={{ scale: 1.2 }}
-              >
-                <Instagram size={18} />
-              </motion.a>
-            </motion.div>
+            {/* Social Media Links */}
+<motion.div 
+  className="flex space-x-4"
+  initial="hidden"
+  animate="visible"
+  variants={staggerChildren}
+>
+  <motion.a 
+    href="https://www.facebook.com/profile.php?id=61553568503550" 
+    aria-label="Facebook" 
+    className="text-white hover:text-[#00A3D9] transition-colors duration-300"
+    variants={subsidiaryVariant}
+    whileHover={{ scale: 1.2 }}
+  >
+    <Facebook size={18} />
+  </motion.a>
+  <motion.a 
+    href="https://x.com/trustygroupltd" 
+    aria-label="Twitter" 
+    className="text-white hover:text-[#00A3D9] transition-colors duration-300"
+    variants={subsidiaryVariant}
+    whileHover={{ scale: 1.2 }}
+  >
+    <Twitter size={18} />
+  </motion.a>
+  <motion.a 
+    href="https://www.linkedin.com/company/101195619/" 
+    aria-label="LinkedIn" 
+    className="text-white hover:text-[#00A3D9] transition-colors duration-300"
+    variants={subsidiaryVariant}
+    whileHover={{ scale: 1.2 }}
+  >
+    <Linkedin size={18} />
+  </motion.a>
+  <motion.a 
+    href="https://www.instagram.com/trustygroupltd/" 
+    aria-label="Instagram" 
+    className="text-white hover:text-[#00A3D9] transition-colors duration-300"
+    variants={subsidiaryVariant}
+    whileHover={{ scale: 1.2 }}
+  >
+    <Instagram size={18} />
+  </motion.a>
+</motion.div>
           </motion.div>
 
           {/* Quick Links */}
@@ -123,7 +124,7 @@ const Footer = () => {
             viewport={{ once: true }}
             variants={fadeIn}
           >
-            <h3 className="text-base font-bold mb-4 text-gray-100">Quick Links</h3>
+            <h3 className="text-base font-bold mb-4 text-gray-100 ">Quick Links</h3>
             <div className="grid grid-cols-2 gap-x-4 gap-y-2">
               <Link to="/" className="text-sm text-gray-300 hover:text-[#00A3D9] transition duration-300">Home</Link>
               <Link to="/about" className="text-sm text-gray-300 hover:text-[#00A3D9] transition duration-300">About Us</Link>
@@ -141,17 +142,18 @@ const Footer = () => {
             >
               <h3 className="text-base font-bold mb-3 mt-6 text-gray-100">Our Subsidiaries</h3>
               <div className="grid grid-cols-2 gap-x-4 gap-y-2">
-                <motion.div variants={subsidiaryVariant}>
-                  <Link to="https://construction.trustygroup.co" className="text-sm text-gray-300 hover:text-[#00A3D9] transition duration-300">
-                    Trusty Construction
-                  </Link>
-                </motion.div>
-                <motion.div variants={subsidiaryVariant}>
-                  <Link to="https://estates.trustygroup.co" className="text-sm text-gray-300 hover:text-[#00A3D9] transition duration-300">
-                    Trusty Estates
-                  </Link>
-                </motion.div>
-              </div>
+  <motion.div variants={subsidiaryVariant}>
+    <p className="text-sm text-gray-300 hover:text-[#00A3D9] transition duration-300 cursor-pointer">
+      Trusty Construction
+    </p>
+  </motion.div>
+  <motion.div variants={subsidiaryVariant}>
+    <p className="text-sm text-gray-300 hover:text-[#00A3D9] transition duration-300 cursor-pointer">
+      Trusty Estates
+    </p>
+  </motion.div>
+</div>
+
               
               <h3 className="text-base font-bold mb-3 mt-4 text-gray-100">Coming Soon</h3>
               <div className="grid grid-cols-2 gap-x-4 gap-y-2">
@@ -233,7 +235,7 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row items-center">
             <p className="text-sm text-gray-400">&copy; {new Date().getFullYear()} Trusty Group Ltd. All rights reserved.</p>
             <motion.p 
-              className="text-xs text-[#00A3D9] md:ml-2 mt-1 md:mt-0"
+              className="text-xs text-[#00A3D9] md:ml-2 mt-1 md:mt-0 animate-bounce"
               initial={{ opacity: 0, y: 5 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8 }}

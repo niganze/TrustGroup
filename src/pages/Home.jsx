@@ -8,6 +8,7 @@ import Luxury from "../assets/images/Busanza.jpeg";
 import Commercial from "../assets/images/Africa.jpeg";
 import Residential from "../assets/images/estate.jpeg";
 import Profile from "../assets/images/Byiringiro.jpeg";
+import Logo from "../assets/images/logo.png";
 
 import {
   CheckCircle,
@@ -40,7 +41,7 @@ function Home() {
   const subsidiaries = [
     {
       id: "trusty-construction",
-      name: "Trust Construction",
+      name: "Trusty Construction",
       projects: [
         {
           id: 1,
@@ -61,7 +62,7 @@ function Home() {
     },
     {
       id: "trusty-estate",
-      name: "Trust Estate",
+      name: "Trusty Estate",
       projects: [
         {
           id: 3,
@@ -128,6 +129,73 @@ function Home() {
     visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
   };
 
+  // Add this before your component's return statement
+const [formData, setFormData] = useState({
+  name: '',
+  email: '',
+  subject: '',
+  message: '',
+  status: 'unread'
+});
+
+const [submitting, setSubmitting] = useState(false);
+const [submitStatus, setSubmitStatus] = useState({
+  success: false,
+  message: ''
+});
+
+const handleChange = (e) => {
+  const { name, value } = e.target;
+  setFormData(prevData => ({
+    ...prevData,
+    [name]: value
+  }));
+};
+
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  setSubmitting(true);
+  setSubmitStatus({ success: false, message: '' });
+  
+  try {
+    const response = await fetch('https://trustbackend-2x52.onrender.com/api/contact', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData)
+    });
+    
+    if (response.ok) {
+      // Clear form on success
+      setFormData({
+        name: '',
+        email: '',
+        subject: '',
+        message: '',
+        status: 'unread'
+      });
+      setSubmitStatus({
+        success: true,
+        message: 'Your message has been sent successfully!'
+      });
+    } else {
+      const errorData = await response.json();
+      setSubmitStatus({
+        success: false,
+        message: errorData.message || 'Failed to send message. Please try again.'
+      });
+    }
+  } catch (error) {
+    setSubmitStatus({
+      success: false,
+      message: 'Network error. Please check your connection and try again.'
+    });
+  } finally {
+    setSubmitting(false);
+  }
+};
+
   return (
     <div className="overflow-hidden ">
       {/* Hero Section */}
@@ -156,11 +224,20 @@ function Home() {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <h1
-              className="text-5xl md:text-7xl font-bold text-white mb-6  font-heading"
-            >
-              TRUSTY GROUP
-            </h1>
+            {/* Logo added here */}
+            <div className="mb-6 flex justify-center">
+  <div className="bg-white p-1.5 rounded-full shadow-sm inline-block">
+    <img 
+      src={Logo} 
+      alt="Trusty Group Logo" 
+      className="h-12 md:h-16 w-auto"
+    />
+  </div>
+</div>
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 font-heading">
+  TRUSTY <span className="text-[#00A3D9]">GROUP</span>
+</h1>
+
             <p
               className="text-xl md:text-2xl text-white mb-8 font-body"
               
@@ -837,7 +914,7 @@ function Home() {
           </motion.div>
 
           {/* Subsidiaries Navigation */}
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
+          <div className="flex flex-wrap justify-center gap-2 mb-12">
             {subsidiaries.map((subsidiary) => (
               <button
                 key={subsidiary.id}
@@ -1061,146 +1138,165 @@ function Home() {
       </div>
     </section>
 
-      {/* contact  section */}
-      <section
-        id="contact"
-        className="py-24 bg-gradient-to-b from-white to-gray-50 mx-8 md:mx-16 lg:mx-24"
+      
+      {/* contact section */}
+<section
+  id="contact"
+  className="py-24 bg-gradient-to-b from-white to-gray-50 mx-8 md:mx-16 lg:mx-24"
+>
+  <div className="container mx-auto px-9">
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      variants={fadeIn}
+      className="text-center mb-12"
+    >
+      <h2 className="text-4xl font-bold mb-4 text-black font-heading">CONTACT US</h2>
+      <div className="w-20 h-1 bg-[#00A3D9] mx-auto mb-6"></div>
+      <p
+        className="text-gray-600 max-w-2xl mx-auto"
+        style={{ fontFamily: "Monda" }}
       >
-        <div className="container mx-auto px-9">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fadeIn}
-            className="text-center mb-12"
-          >
-            <h2 className="text-4xl font-bold mb-4 text-black font-heading">CONTACT US</h2>
-            <div className="w-20 h-1 bg-[#00A3D9] mx-auto mb-6"></div>
-            <p
-              className= "  text-gray-600 max-w-2xl mx-auto"
+        Get in touch with our team to discuss your next project
+      </p>
+    </motion.div>
+
+    <div className="grid md:grid-cols-2 gap-10">
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={fadeIn}
+      >
+        <form className="space-y-6" onSubmit={handleSubmit}>
+          <div className="grid grid-cols-2 gap-6">
+            <div>
+              <label
+                htmlFor="name"
+                className="block text-gray-700 font-medium mb-2"
+                style={{ fontFamily: "Monda" }}
+              >
+                Name
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#00A3D9] focus:border-transparent"
+                required
+              />
+            </div>
+            <div>
+              <label
+                htmlFor="email"
+                className="block text-gray-700 font-medium mb-2"
+                style={{ fontFamily: "Monda" }}
+              >
+                Email
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#00A3D9] focus:border-transparent"
+                required
+              />
+            </div>
+          </div>
+          <div>
+            <label
+              htmlFor="subject"
+              className="block text-gray-700 font-medium mb-2"
               style={{ fontFamily: "Monda" }}
             >
-              Get in touch with our team to discuss your next project
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 gap-10">
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={fadeIn}
+              Subject
+            </label>
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              value={formData.subject}
+              onChange={handleChange}
+              className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#00A3D9] focus:border-transparent"
+              required
+            />
+          </div>
+          <div>
+            <label
+              htmlFor="message"
+              className="block text-gray-700 font-medium mb-2"
+              style={{ fontFamily: "Monda" }}
             >
-              <form className="space-y-6">
-                <div className="grid grid-cols-2 gap-6">
-                  <div>
-                    <label
-                      htmlFor="name"
-                      className="block text-gray-700 font-medium mb-2"
-                      style={{ fontFamily: "Monda" }}
-                    >
-                      Name
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#00A3D9] focus:border-transparent"
-                      required
-                    />
-                  </div>
-                  <div>
-                    <label
-                      htmlFor="email"
-                      className="block text-gray-700 font-medium mb-2"
-                      style={{ fontFamily: "Monda" }}
-                    >
-                      Email
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#00A3D9] focus:border-transparent"
-                      required
-                    />
-                  </div>
-                </div>
-                <div>
-                  <label
-                    htmlFor="subject"
-                    className="block text-gray-700 font-medium mb-2"
-                    style={{ fontFamily: "Monda" }}
-                  >
-                    Subject
-                  </label>
-                  <input
-                    type="text"
-                    id="subject"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#00A3D9] focus:border-transparent"
-                    required
-                  />
-                </div>
-                <div>
-                  <label
-                    htmlFor="message"
-                    className="block text-gray-700 font-medium mb-2"
-                    style={{ fontFamily: "Monda" }}
-                  >
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    rows="5"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#00A3D9] focus:border-transparent"
-                    required
-                  ></textarea>
-                </div>
-                <div className="flex justify-center">
-                  <motion.button
-                    type="submit"
-                    className="bg-gradient-to-r from-[#00A3D9] to-[#0082AE] text-white font-bold py-2 px-6 rounded-md transition-all duration-300 flex items-center gap-2 shadow-md hover:shadow-lg"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    <span>Send Message</span>
-                    <motion.div
-                      initial={{ x: 0 }}
-                      animate={{ x: [0, 5, 0] }}
-                      transition={{ repeat: Infinity, duration: 1.5 }}
-                    >
-                      <SendIcon size={18} />
-                    </motion.div>
-                  </motion.button>
-                </div>
-              </form>
-            </motion.div>
-
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={fadeIn}
+              Message
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              value={formData.message}
+              onChange={handleChange}
+              className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#00A3D9] focus:border-transparent"
+              required
+            ></textarea>
+          </div>
+          {submitStatus.message && (
+            <div className={`text-center p-3 rounded ${submitStatus.success ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}>
+              {submitStatus.message}
+            </div>
+          )}
+          <div className="flex justify-center">
+            <motion.button
+              type="submit"
+              className="bg-gradient-to-r from-[#00A3D9] to-[#0082AE] text-white font-bold py-2 px-6 rounded-md transition-all duration-300 flex items-center gap-2 shadow-md hover:shadow-lg"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              disabled={submitting}
             >
-              <div className="h-96 mb-6 rounded-lg overflow-hidden">
-              <div className="w-full h-full">
-    <iframe
-      width="100%"
-      height="100%"
-      frameBorder="0"
-      scrolling="no"
-      marginHeight="0"
-      marginWidth="0"
-      src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=KN%201%20Rd,%20Kigali,%20Rwanda+(Trust%20Group)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-      title="Trusty Group Office Location"
-      className="w-full h-full"
-    ></iframe>
-  </div>
-              </div>
-            </motion.div>
+              <span>{submitting ? 'Sending...' : 'Send Message'}</span>
+              <motion.div
+                initial={{ x: 0 }}
+                animate={{ x: [0, 5, 0] }}
+                transition={{ repeat: Infinity, duration: 1.5 }}
+              >
+                <SendIcon size={18} />
+              </motion.div>
+            </motion.button>
+          </div>
+        </form>
+      </motion.div>
+
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={fadeIn}
+      >
+        <div className="h-96 mb-6 rounded-lg overflow-hidden">
+          <div className="w-full h-full">
+            <iframe
+              width="100%"
+              height="100%"
+              frameBorder="0"
+              scrolling="no"
+              marginHeight="0"
+              marginWidth="0"
+              src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=KN%201%20Rd,%20Kigali,%20Rwanda+(Trust%20Group)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+              title="Trusty Group Office Location"
+              className="w-full h-full"
+            ></iframe>
           </div>
         </div>
-      </section>
+      </motion.div>
+    </div>
+  </div>
+</section>
 
-      {/* CTA Section */}
+      
       {/* CTA Section */}
       <section className="py-20 relative overflow-hidden bg-gradient-to-r from-blue-600 via-blue-700 to-blue-600 text-white">
         {/* Zigzag Pattern - Top */}

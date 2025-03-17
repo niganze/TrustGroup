@@ -291,7 +291,7 @@ function Projects() {
         
         {/* Project Categories */}
         <div className="mb-8 md:mb-12">
-          <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 md:mb-8 text-center font-heading">Explore Our <span className="text-[#00A3D9]">Portfolio</span></h3>
+          <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 md:mb-8 text-center font-heading">Explore Our <span className="text-[#00A3D9]">Projects</span></h3>
           
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
