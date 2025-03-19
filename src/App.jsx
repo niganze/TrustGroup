@@ -20,6 +20,7 @@ import Hero_section from './admin/Hero_section';
 
 import Reports from './admin/Reports';
 import  Setting  from './admin/Setting';
+import SingleBlog from './pages/SingleBlog';
 
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/singleproject" element={<SingleProject />} />
+          <Route path="/blog/:id" element={<SingleBlog />} />
           <Route path="/blog" element={<Blogs />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/careers" element={<Careers />} />

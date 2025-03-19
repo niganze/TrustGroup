@@ -8,11 +8,12 @@ import Building from '../assets/images/Building.jpeg';
 import Optimizing from '../assets/images/Trusty Construction.jpeg';
 import Estate from '../assets/images/Estate.jpeg';
 import Trusty from '../assets/images/construction.jpg';
-
+import { useNavigate } from 'react-router-dom';
 
 function Blog() {
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
+  const navigate = useNavigate();
 
   // Categories for filtering
   const categories = [
@@ -139,7 +140,9 @@ function Blog() {
       featured: true
     }
   ];
-
+  const handleReadMore = (postId) => {
+    navigate(`/blog/${postId}`);
+  };
   // Filter posts by category and search query
   const filteredPosts = blogPosts.filter(post => {
     const matchesCategory = activeCategory === 'all' || post.category === activeCategory || post.tags.includes(activeCategory);
@@ -206,12 +209,15 @@ function Blog() {
                       </div>
                     </div>
                     <div className="mt-auto">
-                      <button className="px-6 py-2 bg-[#00A3D9] text-white rounded-full font-medium hover:bg-[#0088b3] transition-all duration-300 flex items-center">
-                        Read More
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
-                          <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                        </svg>
-                      </button>
+                    <button 
+  className="px-6 py-2 bg-[#00A3D9] text-white rounded-full font-medium hover:bg-[#0088b3] transition-all duration-300 flex items-center"
+  onClick={() => handleReadMore(featuredPosts[0]?.id)}
+>
+  Read More
+  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
+    <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+  </svg>
+</button>
                     </div>
                   </div>
                 </div>
@@ -248,9 +254,12 @@ function Blog() {
                           <p className="text-xs text-gray-500">{post.publishDate}</p>
                         </div>
                       </div>
-                      <button className="px-4 py-1 text-sm text-[#00A3D9] border border-[#00A3D9] rounded-full hover:bg-[#00A3D9] hover:text-white transition-all">
-                        Read More
-                      </button>
+                      <button 
+  className="px-4 py-1 text-sm text-[#00A3D9] border border-[#00A3D9] rounded-full hover:bg-[#00A3D9] hover:text-white transition-all"
+  onClick={() => handleReadMore(post.id)}
+>
+  Read More
+</button>
                     </div>
                   </div>
                 </div>
@@ -345,12 +354,15 @@ function Blog() {
                   </div>
                 </div>
                 <div className="mt-4 pt-4 border-t border-gray-100">
-                  <button className="px-5 py-2 border border-[#00A3D9] text-[#00A3D9] rounded-full text-sm font-medium hover:bg-[#00A3D9] hover:text-white transition-all duration-300 w-full flex items-center justify-center">
-                    Read Full Article
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
-                      <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                    </svg>
-                  </button>
+                <button 
+  className="px-5 py-2 border border-[#00A3D9] text-[#00A3D9] rounded-full text-sm font-medium hover:bg-[#00A3D9] hover:text-white transition-all duration-300 w-full flex items-center justify-center"
+  onClick={() => handleReadMore(post.id)}
+>
+  Read Full Article
+  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
+    <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+  </svg>
+</button>
                 </div>
               </div>
             </div>
